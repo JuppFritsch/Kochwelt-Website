@@ -1,0 +1,63 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 80px;
+}
+
+.LogoImg {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: auto;
+  padding: 0 120px;
+}
+
+.LogoImgLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.menuLink:hover {
+  color: #008000;
+  text-decoration: underline #008000 3px;
+  text-underline-offset: 7px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 20px;
+  margin-right: 20px;
+  padding-bottom: 6px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0 120px;
+}
