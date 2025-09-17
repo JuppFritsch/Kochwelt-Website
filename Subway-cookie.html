@@ -9,26 +9,39 @@
     <link rel="stylesheet" href="style.css" />
 
 
+    <style>
+        .headerContent-cookies {
+            max-width: 1440px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
     <head>
 
-        <div class="headerContent">
-            <a href="index.html" class="LogoImgLink"><img src="./img/logo.png" class="LogoImg"
-                    alt="Kochwelt Logo" /></a>
-            <nav>
-                <ul>
-                    <li><a class="menuLink active" href="index.html">Start</a></li>
-                    <li><a class="menuLink" href="#">Rezept des Tages</a></li>
-                    <li><a class="menuLink" href="./kontakt.html">Kontakt</a></li>
-                    <li><a class="menuLink" href="#">Impressum</a></li>
-                </ul>
-            </nav>
-        </div>
-
         <div class="main-cookie">
+
+            <div class="headerContent-cookies">
+                <a href="index.html" class="LogoImgLink"><img src="./img/logo.png" class="LogoImg"
+                        alt="Kochwelt Logo" /></a>
+                <nav>
+                    <ul>
+                        <li><a class="menuLink active" href="index.html">Start</a></li>
+                        <li><a class="menuLink" href="#">Rezept des Tages</a></li>
+                        <li><a class="menuLink" href="./kontakt.html">Kontakt</a></li>
+                        <li><a class="menuLink" href="#">Impressum</a></li>
+                    </ul>
+                </nav>
+            </div>
+
             <div class="headlineRezept1">
                 <h1>Subway-Cookie</h1>
             </div>
@@ -36,14 +49,12 @@
             <div class="headimg-cookie"><img class="cookie-img" src="./img/subway-cookies.png" alt=""></div>
 
             <div class="rezept-details">
-                <div> <img class="details-img" src="./img/icons/clock-regular.svg" alt=""> </div>
-                <div> 20min </div>
+                <div class="details"> <img class="details-img" src="./img/icons/clock-regular.svg" alt=""> 20min </div>
 
-                <div> <img class="details-img" src="./img/icons/brain-solid.svg" alt=""> </div>
-                <div>Simpel</div>
+                <div class="details"> <img class="details-img" src="./img/icons/brain-solid.svg" alt=""> Simpel </div>
 
-                <div> <img class="details-img" src="./img/icons/calendar-alt-regular.svg" alt=""> </div>
-                <div> 17.09.2025 </div>
+                <div class="details"> <img class="details-img" src="./img/icons/calendar-alt-regular.svg" alt="">
+                    17.09.2025 </div>
 
             </div>
         </div>
