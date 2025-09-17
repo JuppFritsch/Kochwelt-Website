@@ -279,3 +279,9 @@ nav ul {
 .kontaktButton:hover {
   background: #005c00;
 }
+
+.details-img {
+  width: 20px;
+  height: 20px;
+}
+
