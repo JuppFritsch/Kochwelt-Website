@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kontakt</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="LogoImgLink">
+        <img src="./img/logo.png" class="LogoImg" alt="Kochwelt Logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a class="menuLink" href="./index.html">Start</a></li>
+          <li><a class="menuLink" href="#">Rezept des Tages</a></li>
+          <li><a class="menuLink active" href="./kontakt.html">Kontakt</a></li>
+          <li><a class="menuLink" href="#">Impressum</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="kontaktMain">
+      <form class="kontaktForm">
+        <h2>Kontaktiere uns</h2>
+        <label for="name">Dein Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Deine E-Mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="nachricht">Deine Nachricht:</label>
+        <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
+
+        <button type="submit" class="kontaktButton">Abschicken</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Kochwelt. Alle Rechte vorbehalten.</p>
+    </footer>
+  </body>
+</html>
