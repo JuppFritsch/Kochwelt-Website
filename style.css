@@ -287,3 +287,25 @@ nav ul {
   height: 20px;
 }
 
+.rezept-details {
+  display: flex;
+}
+
+.cookie-img {
+  width: 1000px;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.headimg-cookie{
+  display: flex;
+  justify-content: center;
+}
+
+.main-cookie {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    
+}
