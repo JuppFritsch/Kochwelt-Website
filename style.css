@@ -177,6 +177,8 @@ nav ul {
 }
 
 .headlineRezepte {
+  padding: 0 120px;
+  max-width: 1440px;
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
@@ -199,10 +201,11 @@ nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  min-height: 50vh;
+  justify-content: flex-end;
   padding: 0 120px;
   gap: 48px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .wokImage {
@@ -219,11 +222,6 @@ nav ul {
   text-align: center;
   margin-bottom: 24px;
   font-weight: bold;
-}
-
-.pfanneWokText {
-  flex: 1;
-  max-width: 600px;
 }
 
 /* Kontaktseite */
