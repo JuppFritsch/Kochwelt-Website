@@ -144,9 +144,9 @@ nav ul {
 .ownRezeptSection {
   margin-top: auto;
   background-color: #efefef;
-  padding-bottom: 98px;
-  padding-top: 32px;
-  align-items: flex-end;
+  padding: 60px 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .ownRezepts {
