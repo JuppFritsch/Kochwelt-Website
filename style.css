@@ -18,7 +18,6 @@ header {
 
 .headerContent {
   max-width: 1440px;
-  padding: 0 120px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -52,6 +51,7 @@ main {
 
 /*Logo */
 .LogoImg {
+  padding-left: 120px;
   display: flex;
   align-items: center;
   height: 50px;
@@ -284,4 +284,3 @@ nav ul {
   width: 20px;
   height: 20px;
 }
-
