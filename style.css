@@ -37,6 +37,10 @@ p {
 /* main */
 main {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 /*Logo */
@@ -97,10 +101,12 @@ nav ul {
 }
 
 .mainContent {
-  padding: 64px 120px;
   display: flex;
   flex-direction: row;
-  max-height: 250px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 120px;
 }
 
 .textContentCroissant {
@@ -136,10 +142,11 @@ nav ul {
 
 /* Eigene Rezepte */
 .ownRezeptSection {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: auto;
   background-color: #efefef;
-  padding-bottom: 64px;
+  padding-bottom: 98px;
+  padding-top: 32px;
+  align-items: flex-end;
 }
 
 .ownRezepts {
@@ -158,6 +165,17 @@ nav ul {
 .headlineRezepte {
   display: flex;
   justify-content: center;
-  padding: 32px 120px;
+  margin-bottom: 32px;
   font-size: 28px;
+}
+
+.ownRezeptLink {
+  text-decoration: none;
+  color: black;
+}
+
+.ownRezeptTitle {
+  display: flex;
+  justify-content: center;
+  padding-top: 18x;
 }
