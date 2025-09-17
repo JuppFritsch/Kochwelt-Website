@@ -1,84 +1,103 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Kochwelt</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kochwelt</title>
+  </head>
 
   <body>
     <main>
       <!-- Header für die Navigation -->
       <header>
-        <a href="index.html" class="LogoImgLink"
-          ><img src="./img/logo.png" class="LogoImg" alt="Kochwelt Logo"
-        /></a>
-        <nav>
-          <ul>
-            <li><a class="menuLink" href="#">Start</a></li>
-            <li><a class="menuLink" href="#">Rezept des Tages</a></li>
-            <li><a class="menuLink" href="#">Kontakt</a></li>
-            <li><a class="menuLink" href="#">Impressum</a></li>
-          </ul>
-        </nav>
+        <div class="maxWidth">
+          <a href="index.html" class="LogoImgLink"
+            ><img src="./img/logo.png" class="LogoImg" alt="Kochwelt Logo"
+          /></a>
+          <nav>
+            <ul>
+              <li><a class="menuLink active" href="index.html">Start</a></li>
+              <li><a class="menuLink" href="#">Rezept des Tages</a></li>
+              <li><a class="menuLink" href="./kontakt.html">Kontakt</a></li>
+              <li><a class="menuLink" href="#">Impressum</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
-    <!-- Französische Croissants -->
-    <section class="mainContent">
-      <img class="croissantImage" src="./img/croissant.jpg" alt="Französische Croissants" />
-      <div class="textContentCroissant">
-        <section>
-          <h2 class="croissantTitle">Französische Croissants</h2>
-          <p>
-            Schmackhafte Croissants können auch zu Hause sehr einfach gebacken
-            werden. Mit ca. 30 Minuten Aufwand kannst du ein wundervolles
-            Frühstück zaubern.
-          </p>
-        </section>
-        <section>
-          <button class="rezeptButton"><a href="#"></a>Rezept öffnen</button>
-        </section>
-      </div>
-    </section>
+      <!-- Französische Croissants -->
+      <section class="mainContent">
+        <img
+          class="croissantImage"
+          src="./img/croissant.jpg"
+          alt="Französische Croissants"
+        />
+        <div class="textContentCroissant">
+          <section>
+            <h2 class="croissantTitle">Französische Croissants</h2>
+            <p>
+              Schmackhafte Croissants können auch zu Hause sehr einfach gebacken
+              werden. Mit ca. 30 Minuten Aufwand kannst du ein wundervolles
+              Frühstück zaubern.
+            </p>
+          </section>
+          <section>
+            <button class="rezeptButton"><a href="#"></a>Rezept öffnen</button>
+          </section>
+        </div>
+      </section>
 
-    <!-- Eigene Rezepte -->
-    <section class="ownRezeptSection">
-      <h2 class="headlineRezepte">Lust auf was neues?</h2>
-      <div class="ownRezepts">
-        <a class="ownRezeptLink" href="#"><img class="ownRezeptImage" src="./img/croissant.jpg"
-            alt="Französische Croissants" />
-          <p class="ownRezeptTitle">Rezept 1</p>
-        </a>
+      <!-- Eigene Rezepte -->
+      <section class="ownRezeptSection">
+        <h2 class="headlineRezepte">Lust auf was neues?</h2>
+        <div class="ownRezepts">
+          <a class="ownRezeptLink" href="#"
+            ><img
+              class="ownRezeptImage"
+              src="./img/croissant.jpg"
+              alt="Französische Croissants"
+            />
+            <p class="ownRezeptTitle">Rezept 1</p>
+          </a>
 
-        <a class="ownRezeptLink" href="#"><img class="ownRezeptImage" src="./img/croissant.jpg"
-            alt="Französische Croissants" />
-          <p class="ownRezeptTitle">Rezept 2</p>
-        </a>
+          <a class="ownRezeptLink" href="#"
+            ><img
+              class="ownRezeptImage"
+              src="./img/croissant.jpg"
+              alt="Französische Croissants"
+            />
+            <p class="ownRezeptTitle">Rezept 2</p>
+          </a>
 
-        <a class="ownRezeptLink" href="#"><img class="ownRezeptImage" src="./img/croissant.jpg"
-            alt="Französische Croissants" />
-          <p class="ownRezeptTitle">Rezept 3</p>
-        </a>
-      </div>
-    </section>
-  </main>
+          <a class="ownRezeptLink" href="#"
+            ><img
+              class="ownRezeptImage"
+              src="./img/croissant.jpg"
+              alt="Französische Croissants"
+            />
+            <p class="ownRezeptTitle">Rezept 3</p>
+          </a>
+        </div>
+      </section>
+    </main>
 
-  <!-- Pfanne vs. Wok -->
-  <section>
-    <h2>Pfanne vs. Wok</h2>
-    <p>
-      Die Wahl zwischen Pfanne und Wok hängt von der Art des Gerichts ab, das
-      du zubereiten möchtest. Ein Wok eignet sich hervorragend für asiatische
-      Gerichte, während eine Pfanne vielseitiger ist.
-    </p>
-  </section>
+    <!-- Pfanne vs. Wok -->
+    <div class="pfanneWokSection">
+      <article class="pfanneWokText">
+        <h2 class="pfanneWokTitle">Pfanne vs. Wok</h2>
+        <p class="pfanneWokParagraph">
+          Die Wahl zwischen Pfanne und Wok hängt von der Art des Gerichts ab,
+          das du zubereiten möchtest. Ein Wok eignet sich hervorragend für
+          asiatische Gerichte, während eine Pfanne vielseitiger ist.
+        </p>
+      </article>
+      <img src="./img/wok.jpg" alt="Wok" class="wokImage" />
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Kochwelt. Alle Rechte vorbehalten.</p>
-  </footer>
-</body>
-
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Kochwelt. Alle Rechte vorbehalten.</p>
+    </footer>
+  </body>
 </html>
