@@ -109,27 +109,22 @@
     .portion-control {
         display: flex;
         align-items: center;
-        gap: 10px;
         margin-bottom: 20px;
     }
 
     .portion-control input {
-        width: 50px;
-        text-align: center;
-        padding: 4px;
+        width: 150px;
+        padding: 6px;
+        gap: 10px;
+
     }
 
     .portion-control button {
         background: #008000;
         color: #fff;
         border: none;
-        border-radius: 4px;
-        padding: 6px 12px;
-        cursor: pointer;
-    }
-
-    .portion-control button:hover {
-        background: #006400;
+        padding: 8px 12px;
+        width: 150px;
     }
 
     .zutaten {
@@ -144,7 +139,51 @@
         border-radius: 4px;
     }
 
-    /* Footer */
+    .zutaten-item {
+        background: white;
+    }
+
+    .credit {
+        background: white;
+        padding: 20px;
+        border-radius: 6px;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 172px;
+    }
+
+    .credit h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .credit p {
+        margin: 0;
+        font-size: 24px;
+        color: #555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .profile-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .credit-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
     footer {
         margin-top: auto;
         background: #333;
@@ -186,10 +225,8 @@
         <section class="zutaten-section">
             <div class="portion-control">
                 <span>Zutaten für</span>
-                <input type="number" id="portionen" value="2" min="1" oninput="updateZutaten()">
-                <button onclick="changePortion(-1)">−</button>
-                <button onclick="changePortion(1)">+</button>
-                <span>Portionen</span>
+                <input type="number" id="portionen" value="2" min="1" max="25" oninput="updateZutaten()">
+                <button>Portionen</button>
             </div>
 
             <ul class="zutaten">
@@ -206,25 +243,36 @@
             </ul>
         </section>
 
-        <h2>Zubereitung</h2>
-        <div class="meta">
-            <div>⏱ ca. 9 Minuten</div>
-            <div>🕑 Arbeitszeit ca. 5 Minuten</div>
-            <div>🍳 Kochzeit ca. 4 Minuten</div>
+        <section>
+            <h2>Zubereitung</h2>
+            <div class="meta">
+                <div>⏱ ca. 9 Minuten</div>
+                <div>🕑 Arbeitszeit ca. 5 Minuten</div>
+                <div>🍳 Kochzeit ca. 4 Minuten</div>
+            </div>
+
+            <p>
+                Öl, Tomatenketchup und Wasser in einem Topf vermischen und etwa 1 Min. bei starker Hitze kochen lassen.
+                Die restlichen Zutaten hinzufügen und 3 Min. weiter köcheln lassen. Optional kann noch 1 TL Essig
+                hinzugefügt werden.
+            </p>
+
+            <p>
+                Für Leute, die es gerne schärfer mögen, kann man das Tomatenketchup teilweise durch scharfes
+                Curry-/Chiliketchup ersetzen.
+                Geht fix und schmeckt einfach köstlich zu einer Currywurst.
+            </p>
+        </section>
+
+    </section>
+
+
+    <section class="credit">
+        <h3>Rezept erstellt von</h3>
+        <div class="credit-content">
+            <img class="profile-img" src="./img/profile.png" alt="Profilbild">
+            <p> Sinan</p>
         </div>
-
-        <p>
-            Öl, Tomatenketchup und Wasser in einem Topf vermischen und etwa 1 Min. bei starker Hitze kochen lassen.
-            Die restlichen Zutaten hinzufügen und 3 Min. weiter köcheln lassen. Optional kann noch 1 TL Essig
-            hinzugefügt werden.
-        </p>
-
-        <p>
-            Für Leute, die es gerne schärfer mögen, kann man das Tomatenketchup teilweise durch scharfes
-            Curry-/Chiliketchup ersetzen.
-            Geht fix und schmeckt einfach köstlich zu einer Currywurst.
-        </p>
-
     </section>
 
     <footer>
