@@ -67,6 +67,7 @@ main {
 }
 
 .menuLink.active {
+  color: #008000;
   text-decoration: underline #008000 3px;
   text-underline-offset: 7px;
 }
