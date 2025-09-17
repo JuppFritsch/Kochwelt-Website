@@ -312,14 +312,47 @@ nav ul {
   font-size: 14px;
 }
 
-.zutaten {
-        list-style: none;
-        padding: 0;
-    }
+.zutaten-section {
+  margin: 50px 0;
+}
 
-    .zutaten li {
-        background: #f5f5f5;
-        margin-bottom: 8px;
-        padding: 8px 12px;
-        border-radius: 4px;
-    }
+.portion-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.portion-control input {
+  width: 150px;
+  padding: 6px;
+  gap: 10px;
+
+}
+
+.portion-control button {
+  background: #008000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  width: 150px;
+}
+
+.zutaten {
+  list-style: none;
+  padding: 0;
+}
+
+.zutaten li {
+  background: #f5f5f5;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.ZubereitungsInfo {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  margin-top: 40px;
+}
