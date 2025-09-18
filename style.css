@@ -16,12 +16,21 @@ header {
   height: 100px;
 }
 
+footer {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 40px 0 16px 0;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
 .headerContent {
   max-width: 1440px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 100px;
 }
 
@@ -283,4 +292,248 @@ nav ul {
 .details-img {
   width: 20px;
   height: 20px;
+}
+
+/* Rezept Rumpsteak */
+.bodyRumpsteak {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRumpsteak {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  position: relative;
+  z-index: 10;
+}
+
+.headerContentRumpsteak {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 24px;
+}
+
+.logoImgLinkRumpsteak {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImgRumpsteak {
+  height: 40px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.navRumpsteak ul.navListRumpsteak {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuLinkRumpsteak {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 4px 0;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.menuLinkRumpsteak.activeRumpsteak {
+  color: #008000;
+  text-decoration: underline #008000 3px;
+  text-underline-offset: 7px;
+}
+
+.menuLinkRumpsteak:hover {
+  color: #008000;
+  text-decoration: underline #008000 3px;
+  text-underline-offset: 7px;
+}
+
+.mainRumpsteak {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerRumpsteak {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.rezeptTitleRumpsteak {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.rezeptImageRumpsteak {
+  width: 100%;
+  max-width: 700px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 24px auto;
+}
+
+.rezeptMetaRumpsteak {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metaItemRumpsteak {
+  background: #f5f5f5;
+  color: #444;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metaItemRumpsteakWeiß {
+  background: #ffffff;
+  color: #444;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detailsImgRumpsteak {
+  height: 18px;
+  width: 18px;
+  margin-right: 6px;
+}
+
+.zutatenSectionRumpsteak {
+  margin-bottom: 32px;
+}
+
+.zutatenTitleRumpsteak {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.portionInputRumpsteak {
+  width: 40px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+.portionButtonRumpsteak {
+  background: #008000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 1rem;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.portionButtonRumpsteak:hover {
+  background: #005c00;
+}
+
+.zutatenListeRumpsteak {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.zutatenItemRumpsteak {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.zubereitungSectionRumpsteak {
+  margin-bottom: 32px;
+}
+
+.zubereitungTitleRumpsteak {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.zubereitungTextRumpsteak {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 12px;
+}
+
+.autorSectionRumpsteak {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.autorTitleRumpsteak {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.autorInfoRumpsteak {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.autorAvatarRumpsteak {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eee;
+  object-fit: cover;
+}
+
+.autorNameRumpsteak {
+  font-size: 1rem;
+}
+
+.footerRumpsteak {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 40px 0 16px 0;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footerTextRumpsteak {
+  margin: 0;
 }
