@@ -21,7 +21,6 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 100px;
 }
 
@@ -53,8 +52,9 @@ main {
 .LogoImg {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 70px;
   width: auto;
+  margin-left: 124px;
 }
 
 .LogoImgLink {
@@ -99,6 +99,7 @@ nav ul {
   align-items: center;
   gap: 20px;
   margin: 0;
+  margin-right: 100px;
 }
 
 /* Französische Croissants */
