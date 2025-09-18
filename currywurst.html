@@ -297,6 +297,36 @@
                 }
             });
         }
+        function setPortionen(value) {
+            const input = document.getElementById("portionen");
+            input.value = Math.max(1, Math.min(25, value));
+            updateZutaten();
+        }
+
+        function incrementPortion() {
+            const input = document.getElementById("portionen");
+            let value = parseInt(input.value) || 1;
+            setPortionen(value + 1);
+        }
+
+        function decrementPortion() {
+            const input = document.getElementById("portionen");
+            let value = parseInt(input.value) || 1;
+            setPortionen(value - 1);
+        }
+
+        function validatePortionInput() {
+            const input = document.getElementById("portionen");
+            let value = parseInt(input.value) || 1;
+            if (value < 1) value = 1;
+            if (value > 25) value = 25;
+            input.value = value;
+            updateZutaten();
+            if (input.value !== value.toString()) {
+                input.value = value;
+            }
+        }
+
         function changePortion(delta) {
             const input = document.getElementById("portionen");
             let value = parseInt(input.value) || 1;
@@ -305,6 +335,8 @@
             updateZutaten();
         }
         updateZutaten();
+
+    
     </script>
 </body>
 
