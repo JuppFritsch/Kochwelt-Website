@@ -135,6 +135,11 @@
         width: 150px;
     }
 
+    .portion-label {
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
     .zutaten {
         list-style: none;
         padding: 0;
@@ -186,7 +191,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        margin-top: 10px;
+        margin-top: 30px;
     }
 
     footer {
@@ -194,11 +199,12 @@
         background: #333;
         color: #fff;
         text-align: center;
-        padding: 20px;
+        padding: 150px;
         font-size: 14px;
         position: relative;
         bottom: 0;
         width: auto;
+        height: 150px;
     }
 </style>
 
@@ -229,7 +235,7 @@
 
         <section class="zutaten-section">
             <div class="portion-control">
-                <span>Zutaten für</span>
+                <span class="portion-label">Zutaten für</span>
                 <input type="number" id="portionen" value="2" min="1" max="25" oninput="updateZutaten()">
                 <button>Portionen</button>
             </div>
@@ -296,6 +302,36 @@
                 }
             });
         }
+        function setPortionen(value) {
+            const input = document.getElementById("portionen");
+            input.value = Math.max(1, Math.min(25, value));
+            updateZutaten();
+        }
+
+        function incrementPortion() {
+            const input = document.getElementById("portionen");
+            let value = parseInt(input.value) || 1;
+            setPortionen(value + 1);
+        }
+
+        function decrementPortion() {
+            const input = document.getElementById("portionen");
+            let value = parseInt(input.value) || 1;
+            setPortionen(value - 1);
+        }
+
+        function validatePortionInput() {
+            const input = document.getElementById("portionen");
+            let value = parseInt(input.value) || 1;
+            if (value < 1) value = 1;
+            if (value > 25) value = 25;
+            input.value = value;
+            updateZutaten();
+            if (input.value !== value.toString()) {
+                input.value = value;
+            }
+        }
+
         function changePortion(delta) {
             const input = document.getElementById("portionen");
             let value = parseInt(input.value) || 1;
@@ -304,6 +340,8 @@
             updateZutaten();
         }
         updateZutaten();
+
+    
     </script>
 </body>
 
