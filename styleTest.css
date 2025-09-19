@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  font-family: "Public Sans", Arial, sans-serif;
 }
 
 .bodyIndex {
@@ -125,8 +126,8 @@ main {
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: max(12px, 120px);
+  padding-right: max(12px, 120px);
 }
 
 /* Croissant Section */
@@ -259,16 +260,72 @@ main {
 /* Footer */
 .footerIndex {
   width: 100%;
-  background: #444;
+  background: #222;
   color: #fff;
-  padding: 48px 0 16px 0;
+  padding: 40px 0 16px 0;
   font-size: 1rem;
-  text-align: center;
-  margin-top: 48px; /* Abstand zum Inhalt */
+  margin-top: auto;
+}
+
+.footerContentIndex {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.footerLeftIndex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footerLogoLinkIndex {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImgIndex {
+  height: 32px;
+  width: auto;
+  margin-right: 8px;
+}
+
+.logoTextIndex {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .footerTextIndex {
   margin: 0;
+  font-size: 1rem;
+}
+
+.footerSocialIndex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.footerIconIndex img {
+  height: 28px;
+  width: 28px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s;
+}
+
+.footerIconIndex img:hover {
+  filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
 }
 
 .rumpsteakTable {
@@ -309,17 +366,67 @@ main {
   background: #fff;
 }
 
+/* Public Sans lokal einbinden */
+@font-face {
+  font-family: "Public Sans";
+  src: url("./Public_Sans (1)/PublicSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("./Public_Sans (1)/PublicSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("./Public_Sans (1)/PublicSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("./Public_Sans (1)/PublicSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
+  .containerIndex,
+  .footerContentIndex {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .headerContentIndex {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 16px;
+  }
+
+  .navIndex ul.navListIndex {
+    gap: 16px;
+    font-size: 1rem;
+  }
+
   .mainContentIndex,
   .pfanneWokContainerIndex,
   .ownRezeptsIndex {
     flex-direction: column;
     gap: 32px;
   }
+
   .ownRezeptCardIndex {
     width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
   }
+
   .ownRezeptImageIndex,
   .wokImageIndex,
   .croissantImageIndex {
@@ -327,9 +434,86 @@ main {
     max-width: 340px;
     height: auto;
   }
-  .containerIndex {
+
+  .textContentCroissantIndex {
+    max-width: 100%;
+  }
+
+  .footerContentIndex {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .footerLeftIndex {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerSocialIndex {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+
+  .containerIndex,
+  .footerContentIndex {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .headerContentIndex {
+    gap: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .footerContentIndex {
+    gap: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .kontaktForm {
+    padding: 16px 8px 12px 8px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  .containerIndex,
+  .footerContentIndex {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .headerContentIndex {
+    gap: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .footerContentIndex {
+    gap: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
 
@@ -589,21 +773,23 @@ main {
 }
 
 .kontaktContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 .kontaktForm {
-  background: #e5e5e5;
+  background: #f5f5f5;
   border-radius: 18px;
   padding: 32px 32px 24px 32px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   gap: 12px;
   margin: 0 auto;
 }

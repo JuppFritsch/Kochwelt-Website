@@ -36,3 +36,32 @@ function updateZutaten() {
 
 button.addEventListener('click', updateZutaten);
 input.addEventListener('change', updateZutaten);
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector('.kontaktForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Sende die Daten per AJAX an Formspree
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        form.style.display = "none";
+        const msg = document.createElement("div");
+        msg.className = "kontaktDanke";
+        msg.innerHTML = "<h2>Danke für Ihre Nachricht!</h2><p>Wir melden uns bald bei Ihnen.</p>";
+        form.parentNode.appendChild(msg);
+      } else {
+        alert("Fehler beim Senden. Bitte versuchen Sie es später erneut.");
+      }
+    })
+    .catch(() => {
+      alert("Fehler beim Senden. Bitte versuchen Sie es später erneut.");
+    });
+  });
+});

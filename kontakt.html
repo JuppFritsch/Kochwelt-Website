@@ -29,8 +29,12 @@
     </header>
 
     <main class="kontaktMain">
-      <div class="containerIndex" style="margin-top: 48px; margin-bottom: 48px">
-        <form class="kontaktForm">
+      <div class="containerIndex kontaktContainer">
+        <form
+          class="kontaktForm"
+          action="https://formspree.io/f/movnovdl"
+          method="POST"
+        >
           <h2>Kontaktiere uns</h2>
           <label for="name">Dein Name:</label>
           <input type="text" id="name" name="name" required />
@@ -52,11 +56,48 @@
     </main>
 
     <footer class="footerIndex">
-      <div class="containerIndex">
-        <p class="footerTextIndex">
-          &copy; 2024 Kochwelt. Alle Rechte vorbehalten.
-        </p>
+      <div class="footerContentIndex">
+        <div class="footerLeftIndex">
+          <a href="index.html" class="footerLogoLinkIndex">
+            <img
+              src="./img/logo.png"
+              class="logoImgIndex"
+              alt="Kochwelt Logo"
+            />
+          </a>
+
+          <p class="footerTextIndex">
+            &copy; 2024 Kochwelt. Alle Rechte vorbehalten.
+          </p>
+        </div>
+        <div class="footerSocialIndex">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a
+            href="https://discord.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/discord.svg" alt="Discord" />
+          </a>
+        </div>
       </div>
     </footer>
+    <script src="scriptRumpsteak.js"></script>
   </body>
 </html>
