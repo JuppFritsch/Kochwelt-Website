@@ -4,31 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rumpsteak Rezept</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleTest.css" />
   </head>
   <body class="bodyRumpsteak">
-    <header class="headerRumpsteak">
-      <div class="headerContentRumpsteak">
-        <a href="index.html" class="logoImgLinkRumpsteak">
-          <img
-            src="./img/logo.png"
-            class="logoImgRumpsteak"
-            alt="Kochwelt Logo"
-          />
+    <header class="headerIndex">
+      <div class="headerContentIndex">
+        <a href="index.html" class="logoImgLinkIndex">
+          <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
         </a>
-        <nav class="navRumpsteak">
-          <ul class="navListRumpsteak">
-            <li><a class="menuLinkRumpsteak" href="index.html">Start</a></li>
+        <nav class="navIndex">
+          <ul class="navListIndex">
+            <li><a class="menuLinkIndex" href="index.html">Start</a></li>
             <li>
-              <a class="menuLinkRumpsteak activeRumpsteak" href="Rumpsteak.html"
+              <a class="menuLinkIndex activeIndex" href="Rumpsteak.html"
                 >Rezept des Tages</a
               >
             </li>
             <li>
-              <a class="menuLinkRumpsteak" href="kontakt.html">Kontakt</a>
+              <a class="menuLinkIndex" href="kontakt.html">Kontakt</a>
             </li>
             <li>
-              <a class="menuLinkRumpsteak" href="impressum.html">Impressum</a>
+              <a class="menuLinkIndex" href="impressum.html">Impressum</a>
             </li>
           </ul>
         </nav>
@@ -74,18 +70,32 @@
               type="number"
               value="2"
               min="1"
+              max="20"
               class="portionInputRumpsteak"
             />
             <button class="portionButtonRumpsteak">Portionen</button>
+            <span id="portionMessage" class="portionMessageRumpsteak"></span>
           </h2>
-          <ul class="zutatenListeRumpsteak">
-            <li class="zutatenItemRumpsteak">2 Rumpsteaks (je ca. 200g)</li>
-            <li class="zutatenItemRumpsteakWeiß">Salz und Pfeffer</li>
-            <li class="zutatenItemRumpsteak">2 EL Öl</li>
-            <li class="zutatenItemRumpsteakWeiß">1 Zweig Rosmarin</li>
-            <li class="zutatenItemRumpsteak">1 Knoblauchzehe</li>
-            <li class="zutatenItemRumpsteakWeiß">Butter nach Geschmack</li>
-          </ul>
+          <table class="zutatenTableRumpsteak" id="zutatenTable">
+            <tr>
+              <td data-base="2">2 Rumpsteaks (je ca. 200g)</td>
+            </tr>
+            <tr>
+              <td>Salz und Pfeffer</td>
+            </tr>
+            <tr>
+              <td data-base="2">2 EL Öl</td>
+            </tr>
+            <tr>
+              <td data-base="1">1 Zweig Rosmarin</td>
+            </tr>
+            <tr>
+              <td data-base="1">1 Knoblauchzehe</td>
+            </tr>
+            <tr>
+              <td>Butter nach Geschmack</td>
+            </tr>
+          </table>
         </section>
 
         <section class="zubereitungSectionRumpsteak">
@@ -138,5 +148,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="scriptRumpsteak.js"></script>
   </body>
 </html>
