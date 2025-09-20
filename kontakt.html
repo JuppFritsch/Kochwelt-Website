@@ -3,42 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleTest.css" />
     <title>Kontakt</title>
   </head>
-  <body>
-    <header>
-      <a href="index.html" class="LogoImgLink">
-        <img src="./img/logo.png" class="LogoImg" alt="Kochwelt Logo" />
-      </a>
-      <nav>
-        <ul>
-          <li><a class="menuLink" href="./index.html">Start</a></li>
-          <li><a class="menuLink" href="#">Rezept des Tages</a></li>
-          <li><a class="menuLink active" href="./kontakt.html">Kontakt</a></li>
-          <li><a class="menuLink" href="#">Impressum</a></li>
-        </ul>
-      </nav>
+  <body class="bodyIndex">
+    <header class="headerIndex">
+      <div class="headerContentIndex">
+        <a href="index.html" class="logoImgLinkIndex">
+          <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
+          <span class="logoTextIndex">Kochwelt</span>
+        </a>
+        <nav class="navIndex">
+          <ul class="navListIndex">
+            <li><a class="menuLinkIndex" href="index.html">Start</a></li>
+            <li><a class="menuLinkIndex" href="#">Rezept des Tages</a></li>
+            <li>
+              <a class="menuLinkIndex activeIndex" href="kontakt.html"
+                >Kontakt</a
+              >
+            </li>
+            <li><a class="menuLinkIndex" href="#">Impressum</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="kontaktMain">
-      <form class="kontaktForm">
-        <h2>Kontaktiere uns</h2>
-        <label for="name">Dein Name:</label>
-        <input type="text" id="name" name="name" required />
+      <div class="containerIndex kontaktContainer">
+        <form
+          class="kontaktForm"
+          action="https://formspree.io/f/movnovdl"
+          method="POST"
+        >
+          <h2>Kontaktiere uns</h2>
+          <label for="name">Dein Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="email">Deine E-Mail:</label>
-        <input type="email" id="email" name="email" required />
+          <label for="email">Deine E-Mail:</label>
+          <input type="email" id="email" name="email" required />
 
-        <label for="nachricht">Deine Nachricht:</label>
-        <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
+          <label for="nachricht">Deine Nachricht:</label>
+          <textarea
+            id="nachricht"
+            name="nachricht"
+            rows="6"
+            required
+          ></textarea>
 
-        <button type="submit" class="kontaktButton">Abschicken</button>
-      </form>
+          <button type="submit" class="kontaktButton">Abschicken</button>
+        </form>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2024 Kochwelt. Alle Rechte vorbehalten.</p>
+    <footer class="footerIndex">
+      <div class="footerContentIndex">
+        <div class="footerLeftIndex">
+          <a href="index.html" class="footerLogoLinkIndex">
+            <img
+              src="./img/logo.png"
+              class="logoImgIndex"
+              alt="Kochwelt Logo"
+            />
+          </a>
+
+          <p class="footerTextIndex">
+            &copy; 2024 Kochwelt. Alle Rechte vorbehalten.
+          </p>
+        </div>
+        <div class="footerSocialIndex">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a
+            href="https://discord.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/discord.svg" alt="Discord" />
+          </a>
+        </div>
+      </div>
     </footer>
+    <script src="scriptRumpsteak.js"></script>
   </body>
 </html>
