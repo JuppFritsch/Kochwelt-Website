@@ -1,16 +1,25 @@
 const input = document.querySelector('.portionInputRumpsteak');
 const button = document.querySelector('.portionButtonRumpsteak');
-const message = document.getElementById('portionMessage');
-const zutatenTable = document.getElementById('zutatenTable');
+const zutatenList = document.querySelector('.zutatenListeRumpsteak');
 
-// Speichere die Originaltexte für die Zutaten
+// Meldungs-Element einfügen, falls noch nicht vorhanden
+let message = document.querySelector('.portionMessageRumpsteak');
+if (!message) {
+  message = document.createElement('span');
+  message.className = 'portionMessageRumpsteak';
+  input.parentNode.appendChild(message);
+}
+
+// Originaltexte speichern
 const originalZutaten = [];
-zutatenTable.querySelectorAll('td').forEach(td => {
-  originalZutaten.push(td.textContent);
+zutatenList.querySelectorAll('li').forEach(li => {
+  originalZutaten.push(li.textContent);
 });
 
 function updateZutaten() {
   const value = Number(input.value);
+
+  // Prüfen auf gültigen Bereich
   if (value < 1 || value > 20) {
     message.textContent = 'Bitte gib eine Zahl zwischen 1 und 20 ein!';
     input.value = Math.min(Math.max(value, 1), 20);
@@ -19,23 +28,26 @@ function updateZutaten() {
     message.textContent = '';
   }
 
-  zutatenTable.querySelectorAll('td').forEach((td, i) => {
-    const base = td.getAttribute('data-base');
-    if (base) {
-      // Extrahiere die Einheit und Beschreibung
-      const match = originalZutaten[i].match(/^(\d+)\s*(.*)$/);
-      if (match) {
-        const newAmount = base * value;
-        td.textContent = `${newAmount} ${match[2]}`;
-      }
+  zutatenList.querySelectorAll('li').forEach((li, i) => {
+    const match = originalZutaten[i].match(/^(\d+)\s*(.*)$/);
+    if (match) {
+      const base = Number(match[1]);
+      const newAmount = base * value;
+      li.textContent = `${newAmount} ${match[2]}`;
     } else {
-      td.textContent = originalZutaten[i];
+      li.textContent = originalZutaten[i];
     }
   });
 }
 
+// Mengen direkt beim Laden für 2 Portionen anzeigen
+document.addEventListener('DOMContentLoaded', () => {
+  input.value = 2;
+  updateZutaten();
+});
+
+// Nur beim Klick auf den Button wird gerechnet!
 button.addEventListener('click', updateZutaten);
-input.addEventListener('change', updateZutaten);
 
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.querySelector('.kontaktForm');

@@ -698,12 +698,21 @@ main {
   margin: 0;
 }
 
-.zutatenItemRumpsteak {
+.zutatenItemRumpsteak,
+.zutatenItemRumpsteakWeiß {
   background: #f5f5f5;
   border-radius: 8px;
-  padding: 10px 16px;
+  padding: 12px 16px; /* gleicher Abstand oben und unten */
   margin-bottom: 8px;
   font-size: 1rem;
+  display: flex;
+  align-items: center; /* vertikal zentriert */
+  justify-content: flex-start; /* horizontal linksbündig */
+  text-align: left; /* Text linksbündig */
+}
+
+.zutatenItemRumpsteakWeiß {
+  background: #fff;
 }
 
 .zubereitungSectionRumpsteak {
