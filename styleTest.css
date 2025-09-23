@@ -21,6 +21,7 @@ main {
 }
 
 /* Header */
+
 .headerIndex {
   width: 100%;
   background: #fff;
@@ -34,7 +35,6 @@ main {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   height: 100px;
   padding-left: 120px;
@@ -49,7 +49,7 @@ main {
 }
 
 .logoImgIndex {
-  height: 200px;
+  height: 64px;
   width: auto;
   margin-right: 12px;
 }
@@ -62,7 +62,7 @@ main {
 
 .navIndex {
   position: relative;
-  height: 48px;
+  height: 100px;
   display: flex;
   align-items: flex-end;
 }
@@ -95,13 +95,10 @@ main {
 .menuLinkIndex.activeIndex::after {
   content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   bottom: 0;
   height: 4px;
-  width: 80%;
+  width: 100%;
   background: #008000;
-  border-radius: 2px;
   display: block;
 }
 
@@ -293,7 +290,7 @@ main {
   text-decoration: none;
 }
 
-.logoImgIndex {
+.logoImgIndexFooter {
   height: 32px;
   width: auto;
   margin-right: 8px;
@@ -402,7 +399,6 @@ main {
 
   .headerContentIndex {
     flex-direction: column;
-    align-items: flex-start;
     height: auto;
     padding-left: 12px;
     padding-right: 12px;
@@ -412,6 +408,20 @@ main {
   .navIndex ul.navListIndex {
     gap: 16px;
     font-size: 1rem;
+  }
+
+  .navIndex {
+    position: relative;
+    height: 10px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .logoImgIndex {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
   }
 
   .mainContentIndex,
