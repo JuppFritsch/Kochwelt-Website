@@ -393,12 +393,14 @@ main {
 @media (max-width: 900px) {
   .containerIndex,
   .footerContentIndex {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .headerContentIndex {
     flex-direction: column;
+    display: flex;
+    justify-content: center;
     height: auto;
     padding-left: 12px;
     padding-right: 12px;
@@ -415,13 +417,18 @@ main {
     height: 10px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
   }
 
-  .logoImgIndex {
+  .logoImgLinkIndex {
     display: flex;
     align-items: center;
     text-decoration: none;
     justify-content: center;
+  }
+
+  .logoImgIndex {
+    margin-right: 0px;
   }
 
   .mainContentIndex,
@@ -512,6 +519,17 @@ main {
   .footerContentIndex {
     padding-left: 4px;
     padding-right: 4px;
+  }
+
+  .menuLinkIndex {
+    font-size: 0.9rem;
+  }
+
+  .navIndex {
+    position: relative;
+    height: 35px;
+    display: flex;
+    align-items: flex-end;
   }
 
   .headerContentIndex {
