@@ -7,13 +7,18 @@
     <title>Kochwelt – Currywurst Rezept</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         html,
         body {
-            height: 100%;
+            height: auto;
             margin: 0;
             display: flex;
             flex-direction: column;
             font-family: Arial, sans-serif;
+            overflow-x: hidden;
         }
 
         h1 {
@@ -53,14 +58,21 @@
             align-items: center;
         }
 
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
             flex-direction: row;
-            align-items: center;
-            gap: 2vw;
+            flex-wrap: wrap;
+            gap: 20px;
             margin: 0;
             padding: 0;
+            justify-content: flex-end;
         }
 
         .menuLink {
@@ -210,38 +222,49 @@
             h2 {
                 font-size: 20px;
             }
-        }
-
-        /* Mobile Breakpoint */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 10px 20px;
-            }
 
             nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+                gap: 15px;
+            }
+        }
+
+        /* Mobile Breakpoint 425px */
+        @media (max-width: 425px) {
+            header {
+                padding: 10px;
             }
 
             .LogoImg {
                 height: 40px;
             }
 
-            .portion-control {
-                flex-direction: column;
-                align-items: stretch;
+            nav ul {
+                gap: 12px;
             }
 
-            .portion-control input,
-            .portion-control button {
-                width: 100%;
+            .menuLink {
+                font-size: 14px;
             }
         }
 
+        /* Mobile Breakpoint 375px */
         @media (max-width: 375px) {
+            header {
+                padding: 8px;
+            }
+
+            .LogoImg {
+                height: 35px;
+            }
+
+            nav ul {
+                gap: 8px;
+            }
+
+            .menuLink {
+                font-size: 13px;
+            }
+
             h1 {
                 font-size: 22px;
             }
