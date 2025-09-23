@@ -662,3 +662,8 @@ nav ul {
   color: #555;
   margin-bottom: 16px;
 }
+
+.mailto {
+  color: #008000;
+  text-decoration: none;
+}
