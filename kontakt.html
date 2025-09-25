@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styleTest.css" />
-    <title>Kontakt</title>
-  </head>
-  <body class="bodyIndex">
-    <header class="headerIndex">
-      <div class="headerContentIndex">
-        <a href="index.html" class="logoImgLinkIndex">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styleTest.css" />
+  <title>Kontakt</title>
+</head>
+
+<body class="bodyIndex">
+  <header class="headerIndex">
+    <div class="headerContentIndex">
+      <a href="index.html" class="logoImgLinkIndex">
+        <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
+      </a>
+      <nav class="navIndex">
+        <ul class="navListIndex">
+          <li><a class="menuLinkIndex" href="index.html">Start</a></li>
+          <li><a class="menuLinkIndex" href="./croissant.html ">Rezept des Tages</a></li>
+          <li>
+            <a class="menuLinkIndex activeIndex" href="kontakt.html">Kontakt</a>
+          </li>
+          <li><a class="menuLinkIndex" href="impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="kontaktMain">
+    <div class="containerIndex kontaktContainer">
+      <form class="kontaktForm" action="https://formspree.io/f/movnovdl" method="POST">
+        <h2>Kontaktiere uns</h2>
+        <label for="name">Dein Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Deine E-Mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="nachricht">Deine Nachricht:</label>
+        <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
+
+        <button type="submit" class="kontaktButton">Abschicken</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footerIndex">
+    <div class="footerContentIndex">
+      <div class="footerLeftIndex">
+        <a href="index.html" class="footerLogoLinkIndex">
           <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
         </a>
+<<<<<<< HEAD
         <nav class="navIndex">
           <ul class="navListIndex">
             <li><a class="menuLinkIndex" href="index.html">Start</a></li>
@@ -26,36 +66,30 @@
             </li>
           </ul>
         </nav>
+=======
+
+        <p class="footerTextIndex">
+          &copy; 2024 Kochwelt. Alle Rechte vorbehalten.
+        </p>
+>>>>>>> 5e1f8c2c9763978cf045d6b98f660daa5ff4a784
       </div>
-    </header>
-
-    <main class="kontaktMain">
-      <div class="containerIndex kontaktContainer">
-        <form
-          class="kontaktForm"
-          action="https://formspree.io/f/movnovdl"
-          method="POST"
-        >
-          <h2>Kontaktiere uns</h2>
-          <label for="name">Dein Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Deine E-Mail:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="nachricht">Deine Nachricht:</label>
-          <textarea
-            id="nachricht"
-            name="nachricht"
-            rows="6"
-            required
-          ></textarea>
-
-          <button type="submit" class="kontaktButton">Abschicken</button>
-        </form>
+      <div class="footerSocialIndex">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footerIconIndex">
+          <img src="./img/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footerIconIndex">
+          <img src="./img/icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener" class="footerIconIndex">
+          <img src="./img/icons/discord.svg" alt="Discord" />
+        </a>
       </div>
-    </main>
+    </div>
+  </footer>
+  <script src="scriptRumpsteak.js"></script>
+</body>
 
+<<<<<<< HEAD
     <footer class="footerIndex">
       <div class="footerContentIndex">
         <div class="footerLeftIndex">
@@ -102,3 +136,6 @@
     <script src="scriptRumpsteak.js"></script>
   </body>
 </html>
+=======
+</html>
+>>>>>>> 5e1f8c2c9763978cf045d6b98f660daa5ff4a784
