@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Kochwelt</title>
+    <link rel="stylesheet" href="styleTest.css">
+</head>
+
+<style>
+    .headerContent-Croissants {
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 100px;
+    }
+
+    .details-img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .rezept-details {
+        display: flex;
+        gap: 20px;
+    }
+
+    .Croissants-img {
+        width: 1000px;
+        max-height: 220px;
+        object-fit: cover;
+        margin-bottom: 40px;
+        border-radius: 24px;
+    }
+
+    .headimg-Croissants {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-Croissants {
+        max-width: 1000px;
+        margin: 40px auto;
+        margin-top: 64px;
+    }
+
+    .details {
+        background: #f3f3f3;
+        padding: 6px 12px;
+        border-radius: 14px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px
+    }
+
+    .zutaten-section {
+        margin: 50px 0;
+    }
+
+    .portion-control {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .portion-control input {
+        width: 150px;
+        padding: 6px;
+        margin-left: 10px;
+    }
+
+    .portion-control button {
+        background: #008000;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    .zutaten {
+        list-style: none;
+        padding: 0;
+    }
+
+    .zutatenschwarz {
+        background: #f5f5f5;
+        padding: 8px 12px;
+        border-radius: 18px;
+    }
+
+    .zutatenweiß {
+        padding: 8px 12px;
+    }
+
+    .ZubereitungsInfo {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555555;
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    .credit-profile {
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+
+    .profile-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .credit-name {
+        display: flex;
+        margin-top: 15px;
+        font-size: 24px;
+        color: #555;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .LogoImg {
+        height: 74px;
+        width: auto;
+        margin-left: 212px;
+    }
+
+    .LogoImgLink {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .menuLink {
+        text-decoration: none;
+        color: #333333;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .menuLink.active {
+        color: #008000;
+        text-decoration: underline #008000 3px;
+        text-underline-offset: 7px;
+    }
+
+    .menuLink:hover {
+        color: #008000;
+        text-decoration: underline #008000 3px;
+        text-underline-offset: 7px;
+    }
+
+    nav {
+        display: flex;
+        align-items: flex-end;
+        margin-right: 212px;
+        padding-bottom: 6px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        margin: 0;
+    }
+
+    footer {
+        margin-top: auto;
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        position: relative;
+        bottom: 0;
+        width: auto;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .footerIndex {
+        width: 100%;
+        background: #222;
+        color: #fff;
+        padding: 40px 0 16px 0;
+        font-size: 1rem;
+        margin-top: auto;
+    }
+
+    .footerContentIndex {
+        max-width: 1440px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .footerLeftIndex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .footerLogoLinkIndex {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .logoImgIndex {
+        height: 32px;
+        width: auto;
+        margin-right: 8px;
+    }
+
+    .logoTextIndex {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .footerTextIndex {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .footerSocialIndex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footerIconIndex img {
+        height: 28px;
+        width: 28px;
+        filter: brightness(0) invert(1);
+        transition: filter 0.2s;
+    }
+
+    .footerIconIndex img:hover {
+        filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
+    }
+</style>
+
+<link rel="icon" href="./img/logo_small.png" type="image/png">
+
+</head>
+
+<body>
+
+
+
+    <div class="headerContent-Croissants">
+        <a href="index.html" class="LogoImgLink"><img src="./img/logo.png" class="LogoImg" alt="Kochwelt Logo" /></a>
+        <nav>
+            <ul>
+                <li><a class="menuLink " href="index.html">Start</a></li>
+                <li><a class="menuLink active" href="Croissants.html">Rezept des Tages</a></li>
+                <li><a class="menuLink" href="./kontakt.html">Kontakt</a></li>
+                <li><a class="menuLink" href="impressum.html">Impressum</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-Croissants">
+
+        <div class="headlineRezept1">
+            <h1>Französische Croissants</h1>
+        </div>
+
+        <div class="headimg-Croissants"><img class="Croissants-img" src="./img/croissant.jpg" alt=""></div>
+
+        <div class="rezept-details">
+            <div class="details"> <img class="details-img" src="./img/icons/clock-regular.svg" alt=""> 40min </div>
+
+            <div class="details"> <img class="details-img" src="./img/icons/brain-solid.svg" alt=""> Normal </div>
+
+            <div class="details"> <img class="details-img" src="./img/icons/calendar-alt-regular.svg" alt="">
+                23.09.2025 </div>
+
+        </div>
+
+
+
+
+        <section class="zutaten-section">
+            <div class="portion-control">
+                <span>Zutaten für</span>
+                <input type="number" id="portionen" value="1" min="1" max="20" class="portionInputCroissants">
+                <button class="portionButtonCroissants">Portionen</button>
+            </div>
+
+            <ul class="ZutatenListeCroissants">
+                <li class="zutatenschwarz" data-basis="250"><span>250</span> g Butter</li>
+                <li class="zutatenweiß" data-basis="50"><span>50</span> g Zucker</li>
+                <li class="zutatenschwarz" data-basis="500"><span>500</span>g Mehl</li>
+                <li class="zutatenweiß" data-basis="1"><span>1</span>Prise(N) Salz</li>
+                <li class="zutatenschwarz" data-basis="42"><span>42</span> g Hefe</li>
+                <li class="zutatenweiß" data-basis="2"><span>2</span> Eier</li>
+                <li class="zutatenschwarz" data-basis="0.2"><span>0,2</span>L Milch</li>
+            </ul>
+
+        </section>
+
+        <h2>Zubereitung</h2>
+
+        <div class="rezept-details">
+            <div class="details"> <img class="details-img" src="./img/icons/clock-regular.svg" alt=""> 40min. Gesamtzeit
+            </div>
+            <div class="details"> <img class="details-img" src="./img/icons/clock-regular.svg" alt=""> 40min.
+                Arbeitszeit </div>
+
+        </div>
+
+
+
+        <div class="ZubereitungsInfo">
+            <p>
+                Am Vorabend fertige man aus den oben angegebenen Zutaten einen Hefeteig: Milch lauwarm werden lassen,
+                Hefe mit etwas Zucker und Milch verrühren, kurz stehen lassen, dann mit allen Zutaten außer der Butter
+                vermengen. Teig zugedeckt im Kühlschrank über Nacht stehen lassen.
+                Den Teig aus dem Kühlschrank nehmen und auf einer Arbeitsfläche quadratisch ausrollen. Die Butter
+                zwischen zwei Frischhaltefolien auf die halbe Größe des Quadrates formen, dann mit Mehl bestäuben und
+                auf den Hefeteig legen. Das Mehl ist wichtig, da sich die Butter nicht mit dem Teig vermengen darf, da
+                sonst kein Blätterteig entstehen kann. Also lieber etwas zu viel als zu wenig Mehl zwischen Butter und
+                Hefeteig !
+                Den Teig über die Butter briefumschlagartig legen, so dass von jeder Seite ein Dreieck über der Butter
+                liegt und sie zudeckt. Dieses wird jetzt zu einem Rechteck ausgerollt, dieses Rechteck dreifach
+                übereinander geschlagen und wieder ausgerollt. Das sollte man noch so 2 bis 3 Mal wiederholen. Dann
+                werden Dreiecke geschnitten (etwa 12), und diese werden von der breiten Seite zu Hörnchen geformt.
+                Den Backofen auf 220 bis 250°C vorheizen, hier scheiden sich die Geschmäcker: bis 220°C werden die
+                Croissants (etwa 6 pro Blech) ca. 20 Minuten gebacken, bei 250°C etwa 12 Minuten. Das ist ein herrliches
+                Frühstück!
+
+            </p>
+        </div>
+
+
+        <div class="credit-profile">
+
+            <h3>Rezept erstellt von</h3>
+
+            <div class="credit-name">
+                <img class="profile-img" src="./img/profile.png" alt="">
+
+                Jupp
+            </div>
+
+            <div class="credit-name">
+                <img class="profile-img" src="./img/profile.png" alt="">
+
+                Sinan
+            </div>
+
+            <div class="credit-name">
+                <img class="profile-img" src="./img/profile.png" alt="">
+
+                Daniel
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <footer class="footerIndex">
+        <div class="footerContentIndex">
+            <div class="footerLeftIndex">
+                <a href="index.html" class="footerLogoLinkIndex">
+                    <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
+                </a>
+
+                <p class="footerTextIndex">
+                    &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
+                </p>
+            </div>
+            <div class="footerSocialIndex">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="footerIconIndex">
+                    <img src="./img/icons/instagram.svg" alt="Instagram" />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="footerIconIndex">
+                    <img src="./img/icons/facebook.svg" alt="Facebook" />
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="footerIconIndex">
+                    <img src="./img/icons/discord.svg" alt="Discord" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
