@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Impressum - Kochwelt</title>
-    <link rel="stylesheet" href="styleTest.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum - Kochwelt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
   <style>
     body {
@@ -53,19 +53,18 @@
       text-decoration: underline;
     }
 
-    .impressumMain {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      height: auto;
-    }
+  .impressumMain {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: auto;
+  }
 
-    h1,
-    h2 {
-      color: #333;
-    }
+  h1, h2 {
+    color: #333;
+  }
 
     section {
       margin-bottom: 20px;
@@ -76,6 +75,7 @@
       text-decoration: none;
     }
 
+<<<<<<< HEAD
     footer {
       text-align: center;
       padding: 10px 0;
@@ -110,6 +110,98 @@
         </nav>
       </div>
     </header>
+=======
+/* Footer */
+.footerIndex {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 40px 0 16px 0;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+.footerContentIndex {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.footerLeftIndex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  height: auto;
+}
+
+.footerLogoLinkIndex {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImgIndexFooter {
+  height: 32px;
+  width: auto;
+  margin-right: 8px;
+}
+
+.logoTextIndex {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footerTextIndex {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footerSocialIndex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.footerIconIndex img {
+  height: 28px;
+  width: 28px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s;
+}
+
+.footerIconIndex img:hover {
+  filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
+}
+
+</style>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="headerContent">
+      <a href="index.html" class="LogoImgLink">
+        <img src="img/logo.png" alt="Kochwelt Logo" class="LogoImg">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="menuLink">Start</a></li>
+          <li><a href="rezept-des-tages.html" class="menuLink">Rezept des Tages</a></li>
+          <li><a href="kontakt.html" class="menuLink">Kontakt</a></li>
+          <li><a href="impressum.html" class="menuLink active">Impressum</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+>>>>>>> fd72a63552294df8000fdd38f6e2b1c53213fe48
 
     <!-- Main Content -->
     <main class="impressumMain">
@@ -164,9 +256,49 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Kochwelt – Alle Rechte vorbehalten.</p>
+  <!-- Footer -->
+<footer class="footerIndex">
+      <div class="footerContentIndex">
+        <div class="footerLeftIndex">
+          <a href="index.html" class="footerLogoLinkIndex">
+            <img
+              src="./img/logo.png"
+              class="logoImgIndex"
+              alt="Kochwelt Logo"
+            />
+          </a>
+
+          <p class="footerTextIndex">
+            &copy; 2024 Kochwelt. Alle Rechte vorbehalten.
+          </p>
+        </div>
+        <div class="footerSocialIndex">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a
+            href="https://discord.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/discord.svg" alt="Discord" />
+          </a>
+        </div>
+      </div>
     </footer>
-  </body>
+</body>
 </html>
