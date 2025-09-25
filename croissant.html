@@ -136,10 +136,11 @@
         font-size: 16px;
     }
 
-    .menuLink.active {
+    .menuLinkCroissant.activeCroissant {
         color: #008000;
         text-decoration: underline #008000 3px;
         text-underline-offset: 7px;
+        font-weight: bold;
     }
 
     .menuLink:hover {
@@ -253,10 +254,8 @@
         filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
     }
 </style>
-
 <link rel="icon" href="./img/logo_small.png" type="image/png">
 
-</head>
 
 <body>
     <header class="headerIndex">
@@ -267,10 +266,10 @@
             <nav class="navIndex">
                 <ul class="navListIndex">
                     <li>
-                        <a class="menuLinkIndex activeIndex" href="index.html">Start</a>
+                        <a class="menuLinkIndex" href="index.html">Start</a>
                     </li>
                     <li>
-                        <a class="menuLinkIndex" href="./croissant.html">Rezept des Tages</a>
+                        <a class="menuLinkCroissant activeCroissant" href="./croissant.html">Rezept des Tages</a>
                     </li>
                     <li>
                         <a class="menuLinkIndex" href="./kontakt.html">Kontakt</a>
