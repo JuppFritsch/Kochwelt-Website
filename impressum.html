@@ -27,20 +27,94 @@
     flex: 1;
   }
 
-  header {
-    background-color: #f9f9f9;
-    padding: 10px 0;
-    color: white;
-  }
+.headerIndex {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  position: relative;
+  z-index: 10;
+}
 
-  .headerContent {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+.headerContentIndex {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  padding-left: 120px;
+  padding-right: 120px;
+  box-sizing: border-box;
+}
+
+.logoImgLinkIndex {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImgIndex {
+  height: 64px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.logoTextIndex {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.navIndex {
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.navIndex ul.navListIndex {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuLinkIndex {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 4px 0;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.menuLinkIndex.activeIndex {
+  color: #008000;
+  font-weight: bold;
+  position: relative;
+}
+
+.menuLinkIndex.activeIndex::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: #008000;
+  display: block;
+}
+
+.menuLinkIndex:hover {
+  color: #008000;
+  font-weight: bold;
+}
+
+.menuLinkIndex:hover::after {
+  background: #008000;
+}
 
   .LogoImg {
     height: 50px;
@@ -172,21 +246,25 @@ footer {
 </style>
 <body>
   <!-- Header -->
-  <header>
-    <div class="headerContent">
-      <a href="index.html" class="LogoImgLink">
-        <img src="img/logo.png" alt="Kochwelt Logo" class="LogoImg">
-      </a>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="menuLink">Start</a></li>
-          <li><a href="./croissant.html" class="menuLink">Rezept des Tages</a></li>
-          <li><a href="kontakt.html" class="menuLink">Kontakt</a></li>
-          <li><a href="impressum.html" class="menuLink active">Impressum</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header class="headerIndex">
+      <div class="headerContentIndex">
+        <a href="index.html" class="logoImgLinkIndex">
+          <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
+        </a>
+        <nav class="navIndex">
+          <ul class="navListIndex">
+            <li>
+              <a class="menuLinkIndex activeIndex" href="index.html">Start</a>
+            </li>
+            <li><a class="menuLinkIndex" href="./croissant.html">Rezept des Tages</a></li>
+            <li><a class="menuLinkIndex" href="./kontakt.html">Kontakt</a></li>
+            <li>
+              <a class="menuLinkIndex" href="./impressum.html">Impressum</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
   <!-- Main Content -->
   <main class="impressumMain">
