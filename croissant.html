@@ -9,15 +9,6 @@
 </head>
 
 <style>
-    .headerContent-Croissants {
-        max-width: 1440px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        height: 100px;
-    }
-
     .details-img {
         width: 20px;
         height: 20px;
@@ -268,41 +259,40 @@
 </head>
 
 <body>
-
-
-
-    <div class="headerContent-Croissants">
-        <a href="index.html" class="LogoImgLink"><img src="./img/logo.png" class="LogoImg" alt="Kochwelt Logo" /></a>
-        <nav>
-            <ul>
-                <li><a class="menuLink " href="index.html">Start</a></li>
-                <li><a class="menuLink active" href="Croissants.html">Rezept des Tages</a></li>
-                <li><a class="menuLink" href="./kontakt.html">Kontakt</a></li>
-                <li><a class="menuLink" href="impressum.html">Impressum</a></li>
-            </ul>
-        </nav>
-    </div>
+    <header class="headerIndex">
+        <div class="headerContentIndex">
+            <a href="index.html" class="logoImgLinkIndex">
+                <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
+            </a>
+            <nav class="navIndex">
+                <ul class="navListIndex">
+                    <li>
+                        <a class="menuLinkIndex activeIndex" href="index.html">Start</a>
+                    </li>
+                    <li>
+                        <a class="menuLinkIndex" href="./croissant.html">Rezept des Tages</a>
+                    </li>
+                    <li>
+                        <a class="menuLinkIndex" href="./kontakt.html">Kontakt</a>
+                    </li>
+                    <li>
+                        <a class="menuLinkIndex" href="./impressum.html">Impressum</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div class="main-Croissants">
-
         <div class="headlineRezept1">
             <h1>Französische Croissants</h1>
         </div>
-
         <div class="headimg-Croissants"><img class="Croissants-img" src="./img/croissant.jpg" alt=""></div>
-
         <div class="rezept-details">
-            <div class="details"> <img class="details-img" src="./img/icons/clock-regular.svg" alt=""> 40min </div>
-
-            <div class="details"> <img class="details-img" src="./img/icons/brain-solid.svg" alt=""> Normal </div>
-
-            <div class="details"> <img class="details-img" src="./img/icons/calendar-alt-regular.svg" alt="">
-                23.09.2025 </div>
-
+            <div class="details"><img class="details-img" src="./img/icons/clock-regular.svg" alt=""> 40min </div>
+            <div class="details"><img class="details-img" src="./img/icons/brain-solid.svg" alt=""> Normal </div>
+            <div class="details"><img class="details-img" src="./img/icons/calendar-alt-regular.svg" alt="">23.09.2025 </div>
         </div>
-
-
-
 
         <section class="zutaten-section">
             <div class="portion-control">
