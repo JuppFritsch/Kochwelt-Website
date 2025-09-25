@@ -294,6 +294,11 @@ main {
   height: 32px;
   width: auto;
   margin-right: 8px;
+  filter: brightness(0) invert(1);
+}
+
+.footerLogoLinkIndex:hover .logoImgIndexFooter {
+  filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
 }
 
 .logoTextIndex {
