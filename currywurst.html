@@ -1,151 +1,112 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<style>
-    /* Reset & Basics */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background: #fff;
-}
-
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 600;
-}
-
-nav a.active {
-  color: green;
-  border-bottom: 2px solid green;
-  padding-bottom: 2px;
-}
-
-/* Main */
-main {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 22px;
-  margin: 20px 0 12px;
-}
-
-.recipe-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto 24px auto;
-}
-
-</style>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Kochwelt – Currywurst</title>
-    <!-- dein bestehendes Stylesheet -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currywurst Rezept</title>
     <link rel="stylesheet" href="styleTest.css" />
 </head>
 
-<body class="bodyRumpsteak">
-    <!-- HEADER (bleibt konsistent mit deinem CSS-Klassen) -->
+<body class="bodyIndex">
     <header class="headerIndex">
         <div class="headerContentIndex">
             <a href="index.html" class="logoImgLinkIndex">
                 <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
-                <span class="logoTextIndex">Kochwelt</span>
             </a>
             <nav class="navIndex">
                 <ul class="navListIndex">
                     <li><a class="menuLinkIndex" href="index.html">Start</a></li>
-                    <li><a class="menuLinkIndex activeIndex" href="croissant.html">Rezept des Tages</a></li>
-                    <li><a class="menuLinkIndex" href="kontakt.html">Kontakt</a></li>
-                    <li><a class="menuLinkIndex" href="impressum.html">Impressum</a></li>
+                    <li>
+                        <a class="menuLinkIndex activeIndex" href="./croissant.html">Rezept des Tages</a>
+                    </li>
+                    <li>
+                        <a class="menuLinkIndex" href="kontakt.html">Kontakt</a>
+                    </li>
+                    <li>
+                        <a class="menuLinkIndex" href="impressum.html">Impressum</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- HERO -->
-    <img src="./img/curryyy.png" alt="Currywurst" class="recipe-img">
+    <main class="mainIndex">
+        <div class="containerIndex" style="margin-top: 48px; margin-bottom: 48px">
+            <h1 class="rezeptTitleRumpsteak">Currywurst</h1>
+            <img src="./img/curryyy.png" alt="Currywurst" class="rezeptImageRumpsteak" />
 
-    <!-- MAIN -->
-    <main class="mainRumpsteak containerRumpsteak">
-        <h1 class="rezeptTitleRumpsteak">Currywurst</h1>
+            <div class="rezeptMetaRumpsteak">
+                <span class="metaItemRumpsteak">
+                    <img src="./img/icons/clock-regular.svg" class="detailsImgRumpsteak" alt="Zeit" />
+                    20 Min.
+                </span>
+                <span class="metaItemRumpsteak">
+                    <img src="./img/icons/brain-solid.svg" class="detailsImgRumpsteak" alt="Schwierigkeit" />
+                    einfach
+                </span>
+                <span class="metaItemRumpsteak">
+                    <img src="./img/icons/calendar-alt-regular.svg" class="detailsImgRumpsteak" alt="Datum" />
+                    28.09.2025
+                </span>
+            </div>
 
-        <h2 class="zutatenTitleRumpsteak">Zutaten für</h2>
+            <section class="zutatenSectionRumpsteak">
+                <h2 class="zutatenTitleRumpsteak">
+                    Zutaten für
+                    <input type="number" value="2" min="1" class="portionInputCurrywurst" />
+                    <button class="portionButtonCurrywurst">Portionen</button>
+                </h2>
+                <ul class="zutatenListeCurrywurst">
+                    <li class="zutatenItemCurrywurst">4 Bratwürste</li>
+                    <li class="zutatenItemCurrywurstWeiß">400 ml Tomatenketchup</li>
+                    <li class="zutatenItemCurrywurst">100 ml Wasser</li>
+                    <li class="zutatenItemCurrywurstWeiß">2 TL Currypulver</li>
+                    <li class="zutatenItemCurrywurst">2 EL Öl</li>
+                    <li class="zutatenItemCurrywurstWeiß">Optional: 1 TL Essig</li>
+                </ul>
+            </section>
 
-        <!-- wichtige IDs: portionInput, portionButton, zutatenListe -->
-        <div class="portion-control">
-            <input id="portionInput" class="portionInputCurrywurst" type="number" min="1" max="20" value="2" />
-            <button id="portionButton" class="portionButtonCurrywurst" type="button">Portionen</button>
-            <span class="portionMessageCurrywurst" aria-live="polite"></span>
+            <section class="zubereitungSectionRumpsteak">
+                <h2 class="zubereitungTitleRumpsteak">Zubereitung</h2>
+                <div class="rezeptMetaRumpsteak">
+                    <span class="metaItemRumpsteak">
+                        <img src="./img/icons/clock-regular.svg" class="detailsImgRumpsteak" alt="Zeit" />
+                        ca. 20 Minuten
+                    </span>
+                    <span class="metaItemRumpsteak">
+                        <img src="./img/icons/clock-regular.svg" class="detailsImgRumpsteak" alt="Zeit" />
+                        Gesamtzeit ca. 20 Minuten
+                    </span>
+                </div>
+                <p class="zubereitungTextRumpsteak">
+                    Die Bratwürste in einer Pfanne mit Öl anbraten. Tomatenketchup, Wasser,
+                    Currypulver und optional Essig in einem Topf erhitzen und einige Minuten
+                    köcheln lassen. Anschließend die Würste mit der Soße servieren und nach
+                    Geschmack mit weiterem Currypulver bestreuen.
+                </p>
+            </section>
+
+            <section class="autorSectionRumpsteak">
+                <h3 class="autorTitleRumpsteak">Rezept erstellt von</h3>
+                <div class="autorInfoRumpsteak">
+                    <img src="./img/profile.png" alt="Autor" class="autorAvatarRumpsteak" />
+                    <span class="autorNameRumpsteak">Sinan</span>
+                </div>
+            </section>
         </div>
-
-        <!-- nutze die gleichen List-Klassen wie in deinem CSS -->
-        <ul id="zutatenListe" class="zutatenListeCurrywurst">
-            <li class="zutatenItemCurrywurst">4 Bratwürste</li>
-            <li class="zutatenItemCurrywurstWeiß">400 ml Tomatenketchup</li>
-            <li class="zutatenItemCurrywurst">100 ml Wasser</li>
-            <li class="zutatenItemCurrywurstWeiß">2 TL Currypulver</li>
-            <li class="zutatenItemCurrywurst">2 EL Öl</li>
-            <li class="zutatenItemCurrywurstWeiß">Optional: 1 TL Essig</li>
-        </ul>
-
-        <h2 class="zubereitungTitleRumpsteak">Zubereitung</h2>
-        <p class="zubereitungTextRumpsteak">
-            Zuerst die Bratwürste in einer Pfanne mit Öl anbraten. Danach Ketchup, Wasser, Currypulver
-            und optional Essig hinzufügen und gut verrühren. Die Soße einige Minuten köcheln lassen
-            und mit den Würsten servieren.
-        </p>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footerIndex">
         <div class="footerContentIndex">
             <div class="footerLeftIndex">
                 <a href="index.html" class="footerLogoLinkIndex">
                     <img src="./img/logo.png" class="logoImgIndexFooter" alt="Kochwelt Logo" />
-                    <span class="logoTextIndex">Kochwelt</span>
                 </a>
-                <p class="footerTextIndex">&copy; 2025 Kochwelt. Alle Rechte vorbehalten.</p>
+
+                <p class="footerTextIndex">
+                    &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
+                </p>
             </div>
             <div class="footerSocialIndex">
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="footerIconIndex">
@@ -161,7 +122,6 @@ h2 {
         </div>
     </footer>
 
-    <!-- robustes, fehlerbereinigtes Script -->
     <script src="scriptCurrywurst.js"></script>
 </body>
 
