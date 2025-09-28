@@ -204,14 +204,81 @@
             margin-top: 30px;
         }
 
-        footer {
-            margin-top: auto;
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
+/* Footer */
+.footerIndex {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 40px 0 16px 0;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+.footerContentIndex {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.footerLeftIndex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footerLogoLinkIndex {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImgIndexFooter {
+  height: 32px;
+  width: auto;
+  margin-right: 8px;
+  filter: brightness(0) invert(1);
+}
+
+.footerLogoLinkIndex:hover .logoImgIndexFooter {
+  filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
+}
+
+.logoTextIndex {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footerTextIndex {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footerSocialIndex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.footerIconIndex img {
+  height: 28px;
+  width: 28px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s;
+}
+
+.footerIconIndex img:hover {
+  filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
+}
 
         /* Tablet Breakpoint */
         @media (max-width: 1024px) {
@@ -356,8 +423,48 @@
         </section>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Kochwelt. Alle Rechte vorbehalten.</p>
+    <footer class="footerIndex">
+      <div class="footerContentIndex">
+        <div class="footerLeftIndex">
+          <a href="index.html" class="footerLogoLinkIndex">
+            <img
+              src="./img/logo.png"
+              class="logoImgIndexFooter"
+              alt="Kochwelt Logo"
+            />
+          </a>
+
+          <p class="footerTextIndex">
+            &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
+          </p>
+        </div>
+        <div class="footerSocialIndex">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a
+            href="https://discord.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/discord.svg" alt="Discord" />
+          </a>
+        </div>
+      </div>
     </footer>
 
     <script>
