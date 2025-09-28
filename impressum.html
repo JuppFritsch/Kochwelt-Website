@@ -249,6 +249,28 @@
     filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
   }
 
+  @media (max-width: 758px) {
+    .headerContentIndex {
+      padding-left: 24px;
+      padding-right: 24px;
+      height: 75px;
+    }
+
+    .logoImgIndex {
+      height: 44px;
+    }
+
+    .logoTextIndex {
+      font-size: 1.3rem;
+    }
+
+    .navIndex ul.navListIndex {
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+  }
+
+
   @media (max-width: 500px) {
 
     html,
@@ -326,6 +348,70 @@
       font-size: 1rem;
     }
 
+  }
+
+  /* Header Responsive Fix: Logo + Nav immer nebeneinander */
+  @media (max-width: 900px) {
+    .headerContentIndex {
+      padding-left: 32px;
+      padding-right: 32px;
+      height: 80px;
+    }
+
+    .logoImgIndex {
+      height: 48px;
+    }
+
+    .logoTextIndex {
+      font-size: 1.5rem;
+    }
+
+    .navIndex ul.navListIndex {
+      gap: 20px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .headerContentIndex {
+      padding-left: 12px;
+      padding-right: 12px;
+      height: 70px;
+    }
+
+    .logoImgIndex {
+      height: 40px;
+    }
+
+    .logoTextIndex {
+      font-size: 1.2rem;
+    }
+
+    .navIndex ul.navListIndex {
+      gap: 12px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .headerContentIndex {
+      padding-left: 8px;
+      padding-right: 8px;
+      height: 60px;
+    }
+
+    .logoImgIndex {
+      height: 32px;
+    }
+
+    .logoTextIndex {
+      font-size: 1rem;
+    }
+
+    .navIndex ul.navListIndex {
+      gap: 8px;
+      font-size: 0.8rem;
+    }
   }
 </style>
 
