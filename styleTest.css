@@ -550,6 +550,44 @@ main {
   }
 }
 
+@media (max-width: 320px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+
+  .containerIndex,
+  .footerContentIndex {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .menuLinkIndex {
+    font-size: 0.8rem;
+  }
+
+  .navIndex {
+    height: 30px;
+  }
+
+  .headerContentIndex {
+    gap: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .footerContentIndex {
+    gap: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .kontaktForm {
+    padding: 8px 2px 8px 2px;
+    max-width: 100%;
+  }
+}
+
 .bodyRumpsteak {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
