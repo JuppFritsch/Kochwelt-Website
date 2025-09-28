@@ -2,414 +2,128 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kochwelt – Currywurst Rezept</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            height: auto;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            color: black;
-            margin-top: 20px;
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            color: #333;
-            margin-top: 0;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 0 5vw;
-        }
-
-        .LogoImg {
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .LogoImgLink {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-
-        nav {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-            justify-content: flex-end;
-        }
-
-        .menuLink {
-            text-decoration: none;
-            color: #333333;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .menuLink.active,
-        .menuLink:hover {
-            color: #008000;
-            text-decoration: underline #008000 3px;
-            text-underline-offset: 7px;
-        }
-
-        section {
-            position: relative;
-            max-width: 900px;
-            margin: 0px auto;
-            padding: 0 20px;
-        }
-
-        .recipe-img {
-            width: 100%;
-            max-height: 400px;
-            border-radius: 6px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        .meta {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .meta div {
-            background: #f3f3f3;
-            padding: 6px 12px;
-            border-radius: 14px;
-            font-size: 14px;
-        }
-
-        .zutaten-section {
-            margin: 30px 0;
-        }
-
-        .portion-control {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .portion-control input {
-            flex: 1;
-            min-width: 120px;
-            padding: 6px;
-        }
-
-        .portion-control button {
-            background: #008000;
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            flex: 1;
-            min-width: 120px;
-            cursor: pointer;
-        }
-
-        .portion-label {
-            font-weight: bold;
-        }
-
-        .zutaten {
-            list-style: none;
-            padding: 0;
-        }
-
-        .zutaten li {
-            background: #f5f5f5;
-            margin-bottom: 8px;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-
-        .zutaten-item {
-            background: white;
-        }
-
-        .credit {
-            background: white;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 30px;
-        }
-
-        .credit h3 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .credit p {
-            margin: 0;
-            font-size: 20px;
-            color: #555;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .profile-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .credit-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        footer {
-            margin-top: auto;
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        /* Tablet Breakpoint */
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-        }
-
-        /* Mobile Breakpoint 425px */
-        @media (max-width: 425px) {
-            header {
-                padding: 10px;
-            }
-
-            .LogoImg {
-                height: 40px;
-            }
-
-            nav ul {
-                gap: 12px;
-            }
-
-            .menuLink {
-                font-size: 14px;
-            }
-        }
-
-        /* Mobile Breakpoint 375px */
-        @media (max-width: 375px) {
-            header {
-                padding: 8px;
-            }
-
-            .LogoImg {
-                height: 35px;
-            }
-
-            nav ul {
-                gap: 8px;
-            }
-
-            .menuLink {
-                font-size: 13px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-
-            .credit p {
-                font-size: 18px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currywurst Rezept</title>
+  <link rel="stylesheet" href="styleTest.css" />
 </head>
 
-<body>
-    <header>
-        <a href="index.html" class="LogoImgLink">
-            <img src="./img/logo.png" class="LogoImg" alt="Kochwelt Logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a class="menuLink" href="./index.html">Start</a></li>
-                <li><a class="menuLink active" href="./croissant.html">Rezept des Tages</a></li>
-                <li><a class="menuLink" href="./kontakt.html">Kontakt</a></li>
-                <li><a class="menuLink" href="./impressum.html">Impressum</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bodyIndex">
+  <header class="headerIndex">
+    <div class="headerContentIndex">
+      <a href="index.html" class="logoImgLinkIndex">
+        <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
+      </a>
+      <nav class="navIndex">
+        <ul class="navListIndex">
+          <li><a class="menuLinkIndex" href="index.html">Start</a></li>
+          <li>
+            <a class="menuLinkIndex activeIndex" href="./croissant.html">Rezept des Tages</a>
+          </li>
+          <li>
+            <a class="menuLinkIndex" href="kontakt.html">Kontakt</a>
+          </li>
+          <li>
+            <a class="menuLinkIndex" href="impressum.html">Impressum</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section>
-        <h1>Currywurst</h1>
-        <img class="recipe-img" src="./img/curryyy.png" alt="Currywurst">
+  <main class="mainIndex">
+    <div class="containerIndex" style="margin-top: 48px; margin-bottom: 48px">
+      <h1 class="rezeptTitleRumpsteak">Currywurst</h1>
+      <img src="./img/curryyy.png" alt="Currywurst" class="rezeptImageRumpsteak" />
 
-        <div class="meta">
-            <div>⏱ 9 Min.</div>
-            <div>🟢 simple</div>
-            <div>📅 17.09.2025</div>
+      <div class="rezeptMetaRumpsteak">
+        <span class="metaItemRumpsteak">
+          <img src="./img/icons/clock-regular.svg" class="detailsImgRumpsteak" alt="Zeit" />
+          20 Min.
+        </span>
+        <span class="metaItemRumpsteak">
+          <img src="./img/icons/brain-solid.svg" class="detailsImgRumpsteak" alt="Schwierigkeit" />
+          einfach
+        </span>
+        <span class="metaItemRumpsteak">
+          <img src="./img/icons/calendar-alt-regular.svg" class="detailsImgRumpsteak" alt="Datum" />
+          28.09.2025
+        </span>
+      </div>
+
+      <section class="zutatenSectionRumpsteak">
+        <h2 class="zutatenTitleRumpsteak">
+          Zutaten für
+          <input type="number" value="2" min="1" class="portionInputCurrywurst" />
+          <button class="portionButtonCurrywurst">Portionen</button>
+          <div class="portionMessageCurrywurst"></div>
+        </h2>
+        <ul class="zutatenListeCurrywurst">
+          <li class="zutatenItemCurrywurst">4 Bratwürste</li>
+          <li class="zutatenItemCurrywurstWeiß">400 ml Tomatenketchup</li>
+          <li class="zutatenItemCurrywurst">100 ml Wasser</li>
+          <li class="zutatenItemCurrywurstWeiß">2 TL Currypulver</li>
+          <li class="zutatenItemCurrywurst">2 EL Öl</li>
+          <li class="zutatenItemCurrywurstWeiß">Optional: 1 TL Essig</li>
+        </ul>
+      </section>
+
+      <section class="zubereitungSectionRumpsteak">
+        <h2 class="zubereitungTitleRumpsteak">Zubereitung</h2>
+        <div class="rezeptMetaRumpsteak">
+          <span class="metaItemRumpsteak">
+            <img src="./img/icons/clock-regular.svg" class="detailsImgRumpsteak" alt="Zeit" />
+            ca. 20 Minuten
+          </span>
+          <span class="metaItemRumpsteak">
+            <img src="./img/icons/clock-regular.svg" class="detailsImgRumpsteak" alt="Zeit" />
+            Gesamtzeit ca. 20 Minuten
+          </span>
         </div>
+        <p class="zubereitungTextRumpsteak">
+          Die Bratwürste in einer Pfanne mit Öl anbraten. Tomatenketchup, Wasser,
+          Currypulver und optional Essig in einem Topf erhitzen und einige Minuten
+          köcheln lassen. Anschließend die Würste mit der Soße servieren und nach
+          Geschmack mit weiterem Currypulver bestreuen.
+        </p>
+      </section>
 
-        <section class="zutaten-section">
-            <div class="portion-control">
-                <span class="portion-label">Zutaten für</span>
-                <input type="number" id="portionen" value="2" min="1" max="25" oninput="updateZutaten()">
-                <button>Portionen</button>
-            </div>
+      <section class="autorSectionRumpsteak">
+        <h3 class="autorTitleRumpsteak">Rezept erstellt von</h3>
+        <div class="autorInfoRumpsteak">
+          <img src="./img/profile.png" alt="Autor" class="autorAvatarRumpsteak" />
+          <span class="autorNameRumpsteak">Sinan</span>
+        </div>
+      </section>
+    </div>
+  </main>
 
-            <ul class="zutaten">
-                <li data-basis="10"><span>10</span> g Olivenöl</li>
-                <li data-basis="120"><span>120</span> g Tomatenketchup</li>
-                <li data-basis="60"><span>60</span> g Wasser</li>
-                <li data-basis="1"><span>1</span> EL Currypulver</li>
-                <li data-basis="0.5"><span>0.5</span> TL Cayennepfeffer</li>
-                <li data-basis="0.5"><span>0.5</span> TL Brühe (gekörnt)</li>
-                <li data-basis="2"><span>2</span> EL Zucker</li>
-                <li data-basis="0.5"><span>0.5</span> TL Salz</li>
-                <li data-basis="1"><span>1</span> Prise(n) Pfeffer</li>
-                <li>evtl. Essig</li>
-            </ul>
-        </section>
+  <footer class="footerIndex">
+    <div class="footerContentIndex">
+      <div class="footerLeftIndex">
+        <a href="index.html" class="footerLogoLinkIndex">
+          <img src="./img/logo.png" class="logoImgIndexFooter" alt="Kochwelt Logo" />
+        </a>
 
-        <section>
-            <h2>Zubereitung</h2>
-            <div class="meta">
-                <div>⏱ ca. 9 Minuten</div>
-                <div>🕑 Arbeitszeit ca. 5 Minuten</div>
-                <div>🍳 Kochzeit ca. 4 Minuten</div>
-            </div>
+        <p class="footerTextIndex">
+          &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
+        </p>
+      </div>
+      <div class="footerSocialIndex">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footerIconIndex">
+          <img src="./img/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footerIconIndex">
+          <img src="./img/icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener" class="footerIconIndex">
+          <img src="./img/icons/discord.svg" alt="Discord" />
+        </a>
+      </div>
+    </div>
+  </footer>
 
-            <p>
-                Öl, Tomatenketchup und Wasser in einem Topf vermischen und etwa 1 Min. bei starker Hitze kochen lassen.
-                Die restlichen Zutaten hinzufügen und 3 Min. weiter köcheln lassen. Optional kann noch 1 TL Essig
-                hinzugefügt werden.
-            </p>
-
-            <p>
-                Für Leute, die es gerne schärfer mögen, kann man das Tomatenketchup teilweise durch scharfes
-                Curry-/Chiliketchup ersetzen.
-                Geht fix und schmeckt einfach köstlich zu einer Currywurst.
-            </p>
-        </section>
-
-        <section class="credit">
-            <h3>Rezept erstellt von</h3>
-            <div class="credit-content">
-                <img class="profile-img" src="./img/profile.png" alt="Profilbild">
-                <p> Sinan</p>
-            </div>
-        </section>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Kochwelt. Alle Rechte vorbehalten.</p>
-    </footer>
-
-    <script>
-        function updateZutaten() {
-            const portionen = parseInt(document.getElementById("portionen").value) || 1;
-            document.querySelectorAll(".zutaten li").forEach(li => {
-                const basis = li.getAttribute("data-basis");
-                if (basis) {
-                    li.querySelector("span").textContent = (basis * portionen / 2)
-                        .toFixed(2).replace(/\.00$/, "");
-                }
-            });
-        }
-        function setPortionen(value) {
-            const input = document.getElementById("portionen");
-            input.value = Math.max(1, Math.min(25, value));
-            updateZutaten();
-        }
-
-        function incrementPortion() {
-            const input = document.getElementById("portionen");
-            let value = parseInt(input.value) || 1;
-            setPortionen(value + 1);
-        }
-
-        function decrementPortion() {
-            const input = document.getElementById("portionen");
-            let value = parseInt(input.value) || 1;
-            setPortionen(value - 1);
-        }
-
-        function validatePortionInput() {
-            const input = document.getElementById("portionen");
-            let value = parseInt(input.value) || 1;
-            if (value < 1) value = 1;
-            if (value > 25) value = 25;
-            input.value = value;
-            updateZutaten();
-            if (input.value !== value.toString()) {
-                input.value = value;
-            }
-        }
-
-        function changePortion(delta) {
-            const input = document.getElementById("portionen");
-            let value = parseInt(input.value) || 1;
-            value = Math.max(1, value + delta);
-            input.value = value;
-            updateZutaten();
-        }
-        updateZutaten();
-    </script>
+  <script src="scriptCurrywurst.js"></script>
 </body>
 
 </html>
