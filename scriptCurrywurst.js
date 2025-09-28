@@ -1,69 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const input = document.getElementById('portionInput');
-  const button = document.getElementById('portionButton');
-  const listEl = document.getElementById('zutatenListe');
-  const messageEl = document.querySelector('.portionMessageCurrywurst');
+  const input = document.querySelector('.portionInputCurrywurst');
+  const button = document.querySelector('.portionButtonCurrywurst');
+  const listEl = document.querySelector('.zutatenListeCurrywurst');
 
-  if (!input || !button || !listEl) {
-    console.error('Portion-Script: fehlende Elemente (input/button/zutatenListe).');
-    return;
+  // Fehlermeldung-Element einmalig anlegen und immer sichtbar halten
+  let messageEl = document.querySelector('.portionMessageCurrywurst');
+  if (!messageEl) {
+    messageEl = document.createElement('div');
+    messageEl.className = 'portionMessageCurrywurst';
+    messageEl.style.color = '#d80000';
+    messageEl.style.fontSize = '0.95rem';
+    messageEl.style.marginTop = '6px';
+
+    // direkt NACH dem Button einfügen
+    button.insertAdjacentElement('afterend', messageEl);
   }
 
-  // Li-Elemente + Originaltexte speichern (kein späteres "Verfälschen")
+  // Basiswerte speichern
   const liEls = Array.from(listEl.querySelectorAll('li'));
   const originalTexts = liEls.map(li => li.textContent.trim());
-
-  // Initiale Portionszahl zum Verhältnis: originalNumbers gelten für diese Anzahl
   const initialPortions = Number(input.value) || 1;
 
-  const clamp = v => Math.max(1, Math.min(20, Math.floor(v)));
-
-  function formatNumberForDisplay(n) {
-    // ganze Zahlen ohne Dezimalstelle, sonst bis 2 Nachkommastellen, deutsche Komma
+  function formatNumber(n) {
     if (Math.abs(n - Math.round(n)) < 1e-9) return String(Math.round(n));
-    const rounded = Math.round(n * 100) / 100;
-    // ersetze Punkt mit Komma für DE-Format
-    return String(rounded).replace('.', ',');
+    return String(Math.round(n * 100) / 100).replace('.', ',');
   }
 
   function updateZutaten() {
     let portions = Number(input.value);
-    if (!Number.isFinite(portions)) portions = initialPortions;
-    portions = clamp(portions);
-    input.value = portions; // korrigiere Input falls außerhalb der Grenzen
+    if (!Number.isFinite(portions) || portions < 1) portions = 1;
 
-    // leere Fehlermeldung
-    if (messageEl) messageEl.textContent = '';
+    if (portions > 25) {
+      messageEl.textContent = '⚠️ Maximal 25 Portionen möglich!';
+      input.value = 25;
+      portions = 25;
+    } else {
+      messageEl.textContent = '';
+    }
 
     liEls.forEach((li, idx) => {
-      const original = originalTexts[idx] || '';
-      // finde die erste Zahl in der Zeile (inkl. Dezimaltrennzeichen)
+      const original = originalTexts[idx];
       const match = original.match(/(\d+[.,]?\d*)/);
       if (!match) {
-        // keine Zahl -> unverändert
         li.textContent = original;
         return;
       }
-
       const baseNum = parseFloat(match[1].replace(',', '.'));
-      // skaliere relativ zur initialen Portionszahl (vermeidet Annahmen)
       const scaled = (baseNum / initialPortions) * portions;
-      const scaledStr = formatNumberForDisplay(scaled);
-      // nur die erste Zahl ersetzen (sicherer Ersatz)
+      const scaledStr = formatNumber(scaled);
       li.textContent = original.replace(match[1], scaledStr);
     });
   }
 
-  // initial aufbauen
+  // Initial starten
   updateZutaten();
 
-  // Events: Klick, Enter, Change
+  // Events
   button.addEventListener('click', updateZutaten);
-  input.addEventListener('keydown', (e) => {
+  input.addEventListener('change', updateZutaten);
+  input.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
       e.preventDefault();
       updateZutaten();
     }
   });
-  input.addEventListener('change', updateZutaten);
 });
