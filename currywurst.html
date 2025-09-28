@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kochwelt – Currywurst Rezept</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleTest.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+
     <style>
         * {
             box-sizing: border-box;
@@ -118,7 +120,8 @@
             font-size: 14px;
         }
 
-        .zutaten-section {
+        /* Zutaten-Bereich */
+        .zutatenSectionCurrywurst {
             margin: 30px 0;
         }
 
@@ -130,13 +133,13 @@
             margin-bottom: 20px;
         }
 
-        .portion-control input {
+        .portionInputCurrywurst {
             flex: 1;
             min-width: 120px;
             padding: 6px;
         }
 
-        .portion-control button {
+        .portionButtonCurrywurst {
             background: #008000;
             color: #fff;
             border: none;
@@ -144,207 +147,100 @@
             flex: 1;
             min-width: 120px;
             cursor: pointer;
-        }
-
-        .portion-label {
+            border-radius: 4px;
             font-weight: bold;
         }
 
-        .zutaten {
+        .portionButtonCurrywurst:hover {
+            background: #006400;
+        }
+
+        .zutatenListeCurrywurst {
             list-style: none;
             padding: 0;
         }
 
-        .zutaten li {
+        .zutatenListeCurrywurst li {
             background: #f5f5f5;
             margin-bottom: 8px;
             padding: 8px 12px;
             border-radius: 4px;
         }
 
-        .zutaten-item {
-            background: white;
+        /* Footer */
+        .footerIndex {
+            width: 100%;
+            background: #222;
+            color: #fff;
+            padding: 40px 0 16px 0;
+            font-size: 1rem;
+            margin-top: auto;
         }
 
-        .credit {
-            background: white;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 30px;
+        .footerContentIndex {
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            box-sizing: border-box;
+            padding-left: 120px;
+            padding-right: 120px;
         }
 
-        .credit h3 {
-            margin: 0;
-            font-size: 18px;
+        .footerLeftIndex {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .footerLogoLinkIndex {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logoImgIndexFooter {
+            height: 32px;
+            width: auto;
+            margin-right: 8px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footerLogoLinkIndex:hover .logoImgIndexFooter {
+            filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
+        }
+
+        .logoTextIndex {
+            font-size: 1.2rem;
             font-weight: bold;
-            color: #333;
+            color: #fff;
         }
 
-        .credit p {
+        .footerTextIndex {
             margin: 0;
-            font-size: 20px;
-            color: #555;
+            font-size: 1rem;
+        }
+
+        .footerSocialIndex {
             display: flex;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
+            gap: 20px;
         }
 
-        .profile-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
+        .footerIconIndex img {
+            height: 28px;
+            width: 28px;
+            filter: brightness(0) invert(1);
+            transition: filter 0.2s;
         }
 
-        .credit-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-/* Footer */
-.footerIndex {
-  width: 100%;
-  background: #222;
-  color: #fff;
-  padding: 40px 0 16px 0;
-  font-size: 1rem;
-  margin-top: auto;
-}
-
-.footerContentIndex {
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  box-sizing: border-box;
-  padding-left: 120px;
-  padding-right: 120px;
-}
-
-.footerLeftIndex {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.footerLogoLinkIndex {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.logoImgIndexFooter {
-  height: 32px;
-  width: auto;
-  margin-right: 8px;
-  filter: brightness(0) invert(1);
-}
-
-.footerLogoLinkIndex:hover .logoImgIndexFooter {
-  filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
-}
-
-.logoTextIndex {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-}
-
-.footerTextIndex {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.footerSocialIndex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-
-.footerIconIndex img {
-  height: 28px;
-  width: 28px;
-  filter: brightness(0) invert(1);
-  transition: filter 0.2s;
-}
-
-.footerIconIndex img:hover {
-  filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
-}
-
-        /* Tablet Breakpoint */
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-        }
-
-        /* Mobile Breakpoint 425px */
-        @media (max-width: 425px) {
-            header {
-                padding: 10px;
-            }
-
-            .LogoImg {
-                height: 40px;
-            }
-
-            nav ul {
-                gap: 12px;
-            }
-
-            .menuLink {
-                font-size: 14px;
-            }
-
-            
-        }
-
-        /* Mobile Breakpoint 375px */
-        @media (max-width: 375px) {
-            header {
-                padding: 8px;
-            }
-
-            .LogoImg {
-                height: 35px;
-            }
-
-            nav ul {
-                gap: 8px;
-            }
-
-            .menuLink {
-                font-size: 13px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-
-            .credit p {
-                font-size: 18px;
-            }
+        .footerIconIndex img:hover {
+            filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
         }
     </style>
 </head>
@@ -357,7 +253,7 @@
         <nav>
             <ul>
                 <li><a class="menuLink" href="./index.html">Start</a></li>
-                <li><a class="menuLink active" href="./croissant.html">Rezept des Tages</a></li>
+                <li><a class="menuLink active" href="./currywurst.html">Rezept des Tages</a></li>
                 <li><a class="menuLink" href="./kontakt.html">Kontakt</a></li>
                 <li><a class="menuLink" href="./impressum.html">Impressum</a></li>
             </ul>
@@ -374,24 +270,19 @@
             <div>📅 17.09.2025</div>
         </div>
 
-        <section class="zutaten-section">
+        <section class="zutatenSectionCurrywurst">
+            <h2>Zutaten für</h2>
             <div class="portion-control">
-                <span class="portion-label">Zutaten für</span>
-                <input type="number" id="portionen" value="2" min="1" max="25" oninput="updateZutaten()">
-                <button>Portionen</button>
+                <input type="number" value="2" min="1" class="portionInputCurrywurst" />
+                <button class="portionButtonCurrywurst">Portionen</button>
             </div>
-
-            <ul class="zutaten">
-                <li data-basis="10"><span>10</span> g Olivenöl</li>
-                <li data-basis="120"><span>120</span> g Tomatenketchup</li>
-                <li data-basis="60"><span>60</span> g Wasser</li>
-                <li data-basis="1"><span>1</span> EL Currypulver</li>
-                <li data-basis="0.5"><span>0.5</span> TL Cayennepfeffer</li>
-                <li data-basis="0.5"><span>0.5</span> TL Brühe (gekörnt)</li>
-                <li data-basis="2"><span>2</span> EL Zucker</li>
-                <li data-basis="0.5"><span>0.5</span> TL Salz</li>
-                <li data-basis="1"><span>1</span> Prise(n) Pfeffer</li>
-                <li>evtl. Essig</li>
+            <ul class="zutatenListeCurrywurst">
+                <li>2 Bratwürste</li>
+                <li>200 ml Tomatenketchup</li>
+                <li>50 ml Wasser</li>
+                <li>1 TL Currypulver</li>
+                <li>1 EL Öl</li>
+                <li>Optional: 1 TL Essig</li>
             </ul>
         </section>
 
@@ -404,121 +295,47 @@
             </div>
 
             <p>
-                Öl, Tomatenketchup und Wasser in einem Topf vermischen und etwa 1 Min. bei starker Hitze kochen lassen.
-                Die restlichen Zutaten hinzufügen und 3 Min. weiter köcheln lassen. Optional kann noch 1 TL Essig
-                hinzugefügt werden.
+                Öl in einem Topf erhitzen. Tomatenketchup und Wasser dazugeben und etwa 1 Minute bei starker Hitze
+                kochen lassen.
+                Currypulver und die restlichen Zutaten hinzufügen und 3 Minuten weiter köcheln lassen. Optional etwas
+                Essig
+                für eine frische Note unterrühren.
             </p>
 
             <p>
-                Für Leute, die es gerne schärfer mögen, kann man das Tomatenketchup teilweise durch scharfes
-                Curry-/Chiliketchup ersetzen.
-                Geht fix und schmeckt einfach köstlich zu einer Currywurst.
+                Wer es gerne schärfer mag, kann einen Teil des Ketchups durch scharfes Chili- oder Curryketchup
+                ersetzen.
+                Klassisch serviert mit Pommes oder Brötchen – fertig ist die Currywurst.
             </p>
-        </section>
-
-        <section class="credit">
-            <h3>Rezept erstellt von</h3>
-            <div class="credit-content">
-                <img class="profile-img" src="./img/profile.png" alt="Profilbild">
-                <p> Sinan</p>
-            </div>
         </section>
     </section>
 
     <footer class="footerIndex">
-      <div class="footerContentIndex">
-        <div class="footerLeftIndex">
-          <a href="index.html" class="footerLogoLinkIndex">
-            <img
-              src="./img/logo.png"
-              class="logoImgIndexFooter"
-              alt="Kochwelt Logo"
-            />
-          </a>
+        <div class="footerContentIndex">
+            <div class="footerLeftIndex">
+                <a href="index.html" class="footerLogoLinkIndex">
+                    <img src="./img/logo.png" class="logoImgIndexFooter" alt="Kochwelt Logo" />
+                </a>
 
-          <p class="footerTextIndex">
-            &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
-          </p>
+                <p class="footerTextIndex">
+                    &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
+                </p>
+            </div>
+            <div class="footerSocialIndex">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="footerIconIndex">
+                    <img src="./img/icons/instagram.svg" alt="Instagram" />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="footerIconIndex">
+                    <img src="./img/icons/facebook.svg" alt="Facebook" />
+                </a>
+                <a href="https://discord.com" target="_blank" rel="noopener" class="footerIconIndex">
+                    <img src="./img/icons/discord.svg" alt="Discord" />
+                </a>
+            </div>
         </div>
-        <div class="footerSocialIndex">
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener"
-            class="footerIconIndex"
-          >
-            <img src="./img/icons/instagram.svg" alt="Instagram" />
-          </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener"
-            class="footerIconIndex"
-          >
-            <img src="./img/icons/facebook.svg" alt="Facebook" />
-          </a>
-          <a
-            href="https://discord.com"
-            target="_blank"
-            rel="noopener"
-            class="footerIconIndex"
-          >
-            <img src="./img/icons/discord.svg" alt="Discord" />
-          </a>
-        </div>
-      </div>
     </footer>
 
-    <script>
-        function updateZutaten() {
-            const portionen = parseInt(document.getElementById("portionen").value) || 1;
-            document.querySelectorAll(".zutaten li").forEach(li => {
-                const basis = li.getAttribute("data-basis");
-                if (basis) {
-                    li.querySelector("span").textContent = (basis * portionen / 2)
-                        .toFixed(2).replace(/\.00$/, "");
-                }
-            });
-        }
-        function setPortionen(value) {
-            const input = document.getElementById("portionen");
-            input.value = Math.max(1, Math.min(25, value));
-            updateZutaten();
-        }
-
-        function incrementPortion() {
-            const input = document.getElementById("portionen");
-            let value = parseInt(input.value) || 1;
-            setPortionen(value + 1);
-        }
-
-        function decrementPortion() {
-            const input = document.getElementById("portionen");
-            let value = parseInt(input.value) || 1;
-            setPortionen(value - 1);
-        }
-
-        function validatePortionInput() {
-            const input = document.getElementById("portionen");
-            let value = parseInt(input.value) || 1;
-            if (value < 1) value = 1;
-            if (value > 25) value = 25;
-            input.value = value;
-            updateZutaten();
-            if (input.value !== value.toString()) {
-                input.value = value;
-            }
-        }
-
-        function changePortion(delta) {
-            const input = document.getElementById("portionen");
-            let value = parseInt(input.value) || 1;
-            value = Math.max(1, value + delta);
-            input.value = value;
-            updateZutaten();
-        }
-        updateZutaten();
-    </script>
+    <script src="scriptCurrywurst.js"></script>
 </body>
 
 </html>
