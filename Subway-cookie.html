@@ -1,299 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subway-cookie Rezept</title>
+    <link rel="stylesheet" href="styleTest.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kochwelt - Subway-Cookie Rezept</title>
-
-    <script src="./CookieZutaten-Berechnung.js"></script>
-
-
-    <style>
-        .headerContent-cookies {
-            max-width: 1440px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            height: 100px;
-        }
-
-        .details-img {
-            width: 20px;
-            height: 20px;
-        }
-
-        .rezept-details {
-            display: flex;
-            gap: 20px;
-        }
-
-        .cookie-img {
-            width: 1000px;
-            max-height: 220px;
-            object-fit: cover;
-            margin-bottom: 40px;
-            border-radius: 24px;
-        }
-
-        .headimg-cookie {
-            display: flex;
-            justify-content: center;
-        }
-
-        .main-cookie {
-            max-width: 1000px;
-            margin: 40px auto;
-            margin-top: 64px;
-        }
-
-        .details {
-            background: #f3f3f3;
-            padding: 6px 12px;
-            border-radius: 14px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 10px
-        }
-
-        .zutaten-section {
-            margin: 50px 0;
-        }
-
-        .portion-control {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .portion-control input {
-            width: 150px;
-            padding: 6px;
-            gap: 10px;
-
-        }
-
-        .portion-control button {
-            background: #008000;
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            width: 150px;
-        }
-
-        .zutaten {
-            list-style: none;
-            padding: 0;
-        }
-
-        .zutaten li {
-            background: #f5f5f5;
-            margin-bottom: 8px;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-
-        .ZubereitungsInfo {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555555;
-            margin: 0;
-            margin-top: 40px;
-        }
-
-        .credit-profile {
-            padding-top: 40px;
-            padding-bottom: 48px;
-        }
-
-        .profile-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-        }
-
-        .credit-name {
-            display: flex;
-            margin-top: 15px;
-            font-size: 24px;
-            color: #555;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .LogoImg {
-            display: flex;
-            align-items: center;
-            height: 74px;
-            width: auto;
-            margin-left: 212px;
-        }
-
-        .LogoImgLink {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .menuLink {
-            text-decoration: none;
-            color: #333333;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .menuLink.active {
-            color: #008000;
-            text-decoration: underline #008000 3px;
-            text-underline-offset: 7px;
-        }
-
-        .menuLink:hover {
-            color: #008000;
-            text-decoration: underline #008000 3px;
-            text-underline-offset: 7px;
-        }
-
-        nav {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            gap: 20px;
-            margin-right: 212px;
-            padding-bottom: 6px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 20px;
-            margin: 0;
-        }
-
-        footer {
-            margin-top: auto;
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            position: relative;
-            bottom: 0;
-            width: auto;
-        }
-
-        body {
-            margin: 0;
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <div class="headerContent-cookies">
-        <a href="index.html" class="LogoImgLink"><img src="./img/logo.png" class="LogoImg" alt="Kochwelt Logo" /></a>
-        <nav>
-            <ul>
-                <li><a class="menuLink active" href="index.html">Start</a></li>
-                <li><a class="menuLink" href="./croissant.html">Rezept des Tages</a></li>
-                <li><a class="menuLink" href="./kontakt.html">Kontakt</a></li>
-                <li><a class="menuLink" href="./impressum.html">Impressum</a></li>
-            </ul>
+  <body class="bodyIndex">
+    <header class="headerIndex">
+      <div class="headerContentIndex">
+        <a href="index.html" class="logoImgLinkIndex">
+          <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
+        </a>
+        <nav class="navIndex">
+          <ul class="navListIndex">
+            <li><a class="menuLinkIndex" href="index.html">Start</a></li>
+            <li>
+              <a class="menuLinkIndex activeIndex" href="./croissant.html"
+                >Rezept des Tages</a
+              >
+            </li>
+            <li>
+              <a class="menuLinkIndex" href="kontakt.html">Kontakt</a>
+            </li>
+            <li>
+              <a class="menuLinkIndex" href="impressum.html">Impressum</a>
+            </li>
+          </ul>
         </nav>
-    </div>
+      </div>
+    </header>
 
-    <div class="main-cookie">
+    <main class="mainIndex">
+      <div class="containerIndex" style="margin-top: 48px; margin-bottom: 48px">
+        <h1 class="rezeptTitleRumpsteak">Subway-cookie</h1>
+        <img
+          src="./img/subway-cookies.png"
+          alt="Subway-cookie"
+          class="rezeptImageRumpsteak"
+        />
 
-        <div class="headlineRezept1">
-            <h1>Subway-Cookie</h1>
+        <div class="rezeptMetaRumpsteak">
+          <span class="metaItemRumpsteak">
+            <img
+              src="./img/icons/clock-regular.svg"
+              class="detailsImgRumpsteak"
+              alt="Zeit"
+            />
+            20 Min.
+          </span>
+          <span class="metaItemRumpsteak">
+            <img
+              src="./img/icons/brain-solid.svg"
+              class="detailsImgRumpsteak"
+              alt="Schwierigkeit"
+            />
+            mittel
+          </span>
+          <span class="metaItemRumpsteak">
+            <img
+              src="./img/icons/calendar-alt-regular.svg"
+              class="detailsImgRumpsteak"
+              alt="Datum"
+            />
+            28.09.2025
+          </span>
         </div>
 
-        <div class="headimg-cookie"><img class="cookie-img" src="./img/subway-cookies.png" alt=""></div>
-
-        <div class="rezept-details">
-            <div class="details"> <img class="details-img" src="./img/icons/clock-regular.svg" alt=""> 20min </div>
-
-            <div class="details"> <img class="details-img" src="./img/icons/brain-solid.svg" alt=""> Simpel </div>
-
-            <div class="details"> <img class="details-img" src="./img/icons/calendar-alt-regular.svg" alt="">
-                17.09.2025 </div>
-
-        </div>
-
-
-
-
-        <section class="zutaten-section">
-            <div class="portion-control">
-                <span>Zutaten für</span>
-                <input type="number" id="portionen" value="2" min="1" max="25" oninput="updateZutaten()">
-                <button>Portionen</button>
-            </div>
-
-            <ul class="zutaten">
-                <li data-basis="10"><span>280</span> g Mehl</li>
-                <li data-basis="120"><span>1</span> TL Natron</li>
-                <li data-basis="60"><span>1</span> TL Salz</li>
-                <li data-basis="1"><span>250</span> g Butter,Weiche</li>
-                <li data-basis="0.5"><span>260</span> g Zucker</li>
-                <li data-basis="0.5"><span>2</span> Eier</li>
-                <li data-basis="2"><span>300</span> g Schokotropfen</li>
-            </ul>
-
+        <section class="zutatenSectionRumpsteak">
+          <h2 class="zutatenTitleRumpsteak">
+            Zutaten für
+            <input
+              type="number"
+              value="2"
+              min="1"
+              class="portionInputRumpsteak"
+            />
+            <button class="portionButtonRumpsteak">Portionen</button>
+          </h2>
+          <ul class="zutatenListeRumpsteak">
+            <li class="zutatenItemRumpsteak">280 g Mehl</li>
+            <li class="zutatenItemRumpsteakWeiß">1 TL Natron</li>
+            <li class="zutatenItemRumpsteak">1 TL Salz</li>
+            <li class="zutatenItemRumpsteakWeiß">250 g Butter, weich</li>
+            <li class="zutatenItemRumpsteak">260 g Zucker</li>
+            <li class="zutatenItemRumpsteakWeiß">2 Eier</li>
+            <li class="zutatenItemRumpsteakWeiß">300 g Schokotropfen</li>
+          </ul>
         </section>
 
-        <h2>Zubereitung</h2>
+        <section class="zubereitungSectionRumpsteak">
+          <h2 class="zubereitungTitleRumpsteak">Zubereitung</h2>
+          <div class="rezeptMetaRumpsteak">
+            <span class="metaItemRumpsteak">
+              <img
+                src="./img/icons/clock-regular.svg"
+                class="detailsImgRumpsteak"
+                alt="Zeit"
+              />
+              ca. 20 Minuten
+            </span>
+            <span class="metaItemRumpsteak">
+              <img
+                src="./img/icons/clock-regular.svg"
+                class="detailsImgRumpsteak"
+                alt="Zeit"
+              />
+              Gesamtzeit ca. 20 Minuten
+            </span>
+          </div>
+          <p class="zubereitungTextRumpsteak">
+            Butter und Zucker mit dem Handmixer 3 Minuten schaumig rühren. Die
+            Eier hinzugeben und weitere 3 min rühren, bis es noch cremiger ist.
+            In einer separaten Schüssel Mehl, Natron und Salz mischen und
+            anschließend zur Buttermischung geben und mit einem Löffel
+            unterrühren, bis gerade so ein Teig entsteht. Auf keinen Fall einen
+            Handmixer hierfür verwenden und das Rühren mit dem Löffel nicht
+            übertreiben. Der Teig ist perfekt, wenn gerade so kein Mehl mehr zu
+            sehen ist. Die Schokolade unterheben. Ein Backblech mit zwei Lagen
+            Backpapier auslegen. Den Backofen auf 190°C Umluft vorheizen.
+            Zwetschgengroße Teighäufchen auf das Backpapier geben und diese
+            leicht andrücken. Sie sollen gleich groß sein, damit sie gleichmäßig
+            backen. Beim Backen laufen sie auseinander und bilden perfekte
+            Kreise. 10-13 min backen. Die Kekse sind noch extrem weich, wenn man
+            sie aus dem Backofen holt - das ist aber normal. Beim Abkühlen sind
+            die Kekse anfangs noch leicht gewölbt, fallen dann aber nach ein
+            paar Minuten ein und bilden dabei diesen leckeren weichen Kekskern,
+            wie er bei Subway so berühmt ist. Ich lasse meine Kekse 20 Minuten
+            abkühlen.
+          </p>
+        </section>
 
-        <div class="ZubereitungsInfo">
-            <p>Butter und Zucker mit dem Handmixer 3 Minuten schaumig rühren. Die Eier hinzugeben und weitere 3 min
-                rühren,
-                bis es noch cremiger ist.
-                In einer separaten Schüssel Mehl, Natron und Salz mischen und anschließend zur Buttermischung geben
-                und mit
-                einem Löffel unterrühren, bis gerade so ein Teig entsteht.
-                Auf keinen Fall einen Handmixer hierfür verwenden und das Rühren mit dem Löffel nicht übertreiben.
-                Der Teig
-                ist perfekt, wenn gerade so kein Mehl mehr zu sehen ist. Die Schokolade unterheben.
-                Ein Backblech mit zwei Lagen Backpapier auslegen. Den Backofen auf 190°C Umluft vorheizen.
-                Zwetschgengroße Teighäufchen auf das Backpapier geben und diese leicht andrücken. Sie sollen gleich
-                groß
-                sein, damit sie gleichmäßig backen. Beim Backen laufen sie auseinander und bilden perfekte Kreise.
-                10-13 min backen. Die Kekse sind noch extrem weich, wenn man sie aus dem Backofen holt - das ist
-                aber
-                normal. Beim Abkühlen sind die Kekse anfangs noch leicht gewölbt, fallen dann aber nach ein paar
-                Minuten ein
-                und bilden dabei diesen leckeren weichen Kekskern, wie er bei Subway so berühmt ist. Ich lasse meine
-                Kekse
-                20 Minuten abkühlen.
-            </p>
+        <section class="autorSectionRumpsteak">
+          <h3 class="autorTitleRumpsteak">Rezept erstellt von</h3>
+          <div class="autorInfoRumpsteak">
+            <img
+              src="./img/profile.png"
+              alt="Autor"
+              class="autorAvatarRumpsteak"
+            />
+            <span class="autorNameRumpsteak">Daniel</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footerIndex">
+      <div class="footerContentIndex">
+        <div class="footerLeftIndex">
+          <a href="index.html" class="footerLogoLinkIndex">
+            <img
+              src="./img/logo.png"
+              class="logoImgIndexFooter"
+              alt="Kochwelt Logo"
+            />
+          </a>
+
+          <p class="footerTextIndex">
+            &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
+          </p>
         </div>
-
-
-        <div class="credit-profile">
-
-            <h3>Rezept erstellt von</h3>
-
-            <div class="credit-name">
-                <img class="profile-img" src="./img/profile.png" alt="">
-
-                Daniel
-            </div>
+        <div class="footerSocialIndex">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a
+            href="https://discord.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/discord.svg" alt="Discord" />
+          </a>
         </div>
-
-
-
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Kochwelt. Alle Rechte vorbehalten.</p>
+      </div>
     </footer>
 
-</body>
-
+    <script src="scriptRumpsteak.js"></script>
+  </body>
 </html>

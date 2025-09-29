@@ -394,204 +394,7 @@ main {
   font-style: normal;
 }
 
-<<<<<<< HEAD
-/* Responsive */
-@media (max-width: 900px) {
-  .containerIndex,
-  .footerContentIndex {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .headerContentIndex {
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    padding-left: 12px;
-    padding-right: 12px;
-    gap: 16px;
-  }
-
-  .navIndex ul.navListIndex {
-    gap: 16px;
-    font-size: 1rem;
-  }
-
-  .navIndex {
-    position: relative;
-    height: 10px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-
-  .logoImgLinkIndex {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    justify-content: center;
-  }
-
-  .logoImgIndex {
-    margin-right: 0px;
-  }
-
-  .mainContentIndex,
-  .pfanneWokContainerIndex,
-  .ownRezeptsIndex {
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  .ownRezeptCardIndex {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
-  .ownRezeptImageIndex,
-  .wokImageIndex,
-  .croissantImageIndex {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
-  }
-
-  .textContentCroissantIndex {
-    max-width: 100%;
-  }
-
-  .footerContentIndex {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .footerLeftIndex {
-    align-items: center;
-    text-align: center;
-  }
-
-  .footerSocialIndex {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 500px) {
-  html,
-  body {
-    font-size: 15px;
-  }
-
-  .containerIndex,
-  .footerContentIndex {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .headerContentIndex {
-    gap: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .footerContentIndex {
-    gap: 16px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .kontaktForm {
-    padding: 16px 8px 12px 8px;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 375px) {
-  html,
-  body {
-    font-size: 14px;
-  }
-
-  .containerIndex,
-  .footerContentIndex {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-
-  .menuLinkIndex {
-    font-size: 0.9rem;
-  }
-
-  .navIndex {
-    position: relative;
-    height: 35px;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .headerContentIndex {
-    gap: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-
-  .footerContentIndex {
-    gap: 8px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-}
-
-@media (max-width: 320px) {
-  html,
-  body {
-    font-size: 13px;
-  }
-
-  .containerIndex,
-  .footerContentIndex {
-    padding-left: 2px;
-    padding-right: 2px;
-  }
-
-  .menuLinkIndex {
-    font-size: 0.8rem;
-  }
-
-  .navIndex {
-    height: 30px;
-  }
-
-  .headerContentIndex {
-    gap: 2px;
-    padding-left: 2px;
-    padding-right: 2px;
-  }
-
-  .footerContentIndex {
-    gap: 4px;
-    padding-left: 2px;
-    padding-right: 2px;
-  }
-
-  .kontaktForm {
-    padding: 8px 2px 8px 2px;
-    max-width: 100%;
-  }
-}
-
-=======
 /* ========== Rumpsteak/Currywurst Page Layout ========== */
->>>>>>> 85a1eb027d107a978dc9b1651e152ebf8c2c0c82
 .bodyRumpsteak {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -974,7 +777,6 @@ main {
 
 /* ========== Responsive ========== */
 @media (max-width: 900px) {
-
   .containerIndex,
   .footerContentIndex {
     padding-left: 32px;
@@ -1064,7 +866,6 @@ main {
 }
 
 @media (max-width: 500px) {
-
   html,
   body {
     font-size: 15px;
@@ -1156,7 +957,6 @@ main {
 }
 
 @media (max-width: 375px) {
-
   html,
   body {
     font-size: 14px;
@@ -1195,7 +995,6 @@ main {
 }
 
 @media (max-width: 320px) {
-
   .zutatenListeRumpsteak li,
   .zutatenListeCurrywurst li {
     font-size: 0.85rem;
@@ -1209,7 +1008,6 @@ main {
   }
 
   @media (max-width: 320px) {
-
     html,
     body {
       font-size: 13px;
@@ -1311,7 +1109,6 @@ main {
       justify-content: center;
     }
   }
-
 }
 
 @media (max-width: 280px) {
