@@ -777,6 +777,7 @@ main {
 
 /* ========== Responsive ========== */
 @media (max-width: 900px) {
+
   .containerIndex,
   .footerContentIndex {
     padding-left: 32px;
@@ -863,9 +864,43 @@ main {
     width: 100%;
     margin-top: 12px;
   }
+
+  /* Impressum Seite */
+  .impressumMain {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+  .impressumMain h1 {
+    margin-bottom: 20px;
+  }
+
+  .impressumMain h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .impressumMain p {
+    line-height: 1.6;
+  }
+
+  .mailto {
+    color: #008000;
+    text-decoration: none;
+  }
+
+  .mailto:hover {
+    text-decoration: underline;
+  }
+
 }
 
 @media (max-width: 500px) {
+
   html,
   body {
     font-size: 16px;
@@ -914,9 +949,11 @@ main {
 }
 
 @media (max-width: 425px) {
+
   html,
   body {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
   }
 
   .portion-control {
@@ -946,7 +983,8 @@ main {
   .metaItemRumpsteakWeiß {
     flex: 1 1 calc(50% - 8px);
     text-align: center;
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
     box-sizing: border-box;
   }
 
@@ -955,30 +993,36 @@ main {
   .portionButtonRumpsteak,
   .portionButtonCurrywurst {
     width: 100%;
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
     padding: 8px;
   }
 
   .zutatenListeRumpsteak li,
   .zutatenListeCurrywurst li {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
     padding: 10px 12px;
     word-break: break-word;
   }
 
   .menuLinkIndex {
-    font-size: 16px; /* Mindestgröße für Navigation */
+    font-size: 16px;
+    /* Mindestgröße für Navigation */
   }
 
   .navIndex ul.navListIndex {
-    font-size: 16px; /* Mindestgröße für Navigation */
+    font-size: 16px;
+    /* Mindestgröße für Navigation */
   }
 }
 
 @media (max-width: 375px) {
+
   html,
   body {
-    font-size: 16px; /* Mindestgröße beibehalten */
+    font-size: 16px;
+    /* Mindestgröße beibehalten */
   }
 
   .containerIndex,
@@ -989,36 +1033,44 @@ main {
 
   .zutatenTitleRumpsteak {
     margin-top: -28px;
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
   }
 
   .menuLinkIndex {
-    font-size: 16px; /* Mindestgröße für Navigation */
+    font-size: 16px;
+    /* Mindestgröße für Navigation */
   }
 
   .navIndex ul.navListIndex {
-    font-size: 16px; /* Mindestgröße für Navigation */
+    font-size: 16px;
+    /* Mindestgröße für Navigation */
   }
 
   .zutatenListeRumpsteak li,
   .zutatenListeCurrywurst li {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
     padding: 8px 10px;
   }
 
   .zubereitungTextRumpsteak {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
   }
 
   .autorNameRumpsteak {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
   }
 }
 
 @media (max-width: 320px) {
+
   html,
   body {
-    font-size: 16px; /* Mindestgröße beibehalten */
+    font-size: 16px;
+    /* Mindestgröße beibehalten */
   }
 
   .containerIndex,
@@ -1042,7 +1094,8 @@ main {
 
   .navIndex ul.navListIndex {
     gap: 8px;
-    font-size: 14px; /* Etwas kleiner für 320px */
+    font-size: 14px;
+    /* Etwas kleiner für 320px */
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
@@ -1050,20 +1103,23 @@ main {
   }
 
   .menuLinkIndex {
-    font-size: 14px; /* Etwas kleiner für 320px */
+    font-size: 14px;
+    /* Etwas kleiner für 320px */
     padding: 2px 4px;
   }
 
   .zutatenListeRumpsteak li,
   .zutatenListeCurrywurst li {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
     padding: 6px 8px;
   }
 
   .metaItemRumpsteak,
   .metaItemRumpsteakWeiß {
     width: 100%;
-    font-size: 14px; /* Etwas kleiner für 320px */
+    font-size: 14px;
+    /* Etwas kleiner für 320px */
     padding: 4px 6px;
     text-align: center;
   }
@@ -1071,20 +1127,24 @@ main {
   .portionInputCurrywurst,
   .portionButtonCurrywurst {
     width: 100%;
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
     padding: 6px;
   }
 
   .zubereitungTextRumpsteak {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
     line-height: 1.3;
   }
 
   .autorNameRumpsteak {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
   }
 
   .footerTextIndex {
-    font-size: 16px; /* Mindestgröße */
+    font-size: 16px;
+    /* Mindestgröße */
   }
 }
