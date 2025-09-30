@@ -1,366 +1,235 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum - Kochwelt</title>
+    <link rel="stylesheet" href="styleTest.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impressum - Kochwelt</title>
-  <link rel="stylesheet" href="styleTest.css" />
-</head>
-
-<style>
-  html,
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    height: 100%;
-    margin: 0;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1;
-  }
-
-  /* Header */
-  .headerIndex {
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
-    position: relative;
-    z-index: 10;
-  }
-
-  .headerContentIndex {
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 120px;
-    box-sizing: border-box;
-    height: auto;
-    min-height: 70px;
-  }
-
-  .logoImgLinkIndex {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .logoImgIndex {
-    height: 64px;
-    width: auto;
-    margin-right: 12px;
-  }
-
-  .logoTextIndex {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #222;
-  }
-
-  .headerContentIndex {
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 120px;
-    box-sizing: border-box;
-    height: auto;
-    min-height: 70px;
-  }
-
-  .navIndex ul.navListIndex {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .menuLinkIndex {
-    color: #222;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 4px 0;
-    font-weight: 400;
-    position: relative;
-    display: inline-block;
-    transition: color 0.2s;
-  }
-
-  .menuLinkIndex.activeIndex {
-    color: #008000;
-    font-weight: bold;
-    position: relative;
-  }
-
-  .menuLinkIndex.activeIndex::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 4px;
-    width: 100%;
-    background: #008000;
-    display: block;
-  }
-
-  .menuLinkIndex:hover {
-    color: #008000;
-    font-weight: bold;
-  }
-
-  .menuLinkIndex:hover::after {
-    background: #008000;
-  }
-
-  .LogoImg {
-    height: 50px;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-  }
-
-  .menuLink {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .menuLink:hover {
-    text-decoration: underline;
-    color: #4caf50;
-  }
-
-  .menuLink.active {
-    text-decoration: underline;
-    color: #4caf50;
-  }
-
-  /* Main Content */
-
-  .impressumMain {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: auto;
-  }
-
-  h1,
-  h2 {
-    color: #333;
-  }
-
-  section {
-    margin-bottom: 20px;
-  }
-
-  .mailto {
-    color: #4caf50;
-    text-decoration: none;
-  }
-
-  /* Footer */
-
-  footer {
-    margin-top: auto;
-  }
-
-  .footerIndex {
-    width: 100%;
-    background: #222;
-    color: #fff;
-    padding: 40px 0 16px 0;
-    font-size: 1rem;
-    margin-top: auto;
-  }
-
-  .footerContentIndex {
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    box-sizing: border-box;
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-
-  .footerLeftIndex {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    height: auto;
-  }
-
-  .footerLogoLinkIndex {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .logoImgIndexFooter {
-    height: 32px;
-    width: auto;
-    margin-right: 8px;
-  }
-
-  .logoTextIndex {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .footerTextIndex {
-    margin: 0;
-    font-size: 1rem;
-  }
-
-  .footerSocialIndex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .footerIconIndex img {
-    height: 28px;
-    width: 28px;
-    filter: brightness(0) invert(1);
-    transition: filter 0.2s;
-  }
-
-  .footerIconIndex img:hover {
-    filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
-  }
-
-  @media (max-width: 768px) {
-    .headerContentIndex {
-      padding: 0 24px;
-      min-height: 65px;
+  <style>
+    html,
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      height: 100%;
+      margin: 0;
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* Header */
+    .headerIndex {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+      position: relative;
+      z-index: 10;
+    }
+
+    .headerContentIndex {
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 120px;
+      box-sizing: border-box;
+      height: auto;
+      min-height: 70px;
+    }
+
+    .logoImgLinkIndex {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
 
     .logoImgIndex {
-      height: 44px;
+      height: 64px;
+      width: auto;
+      margin-right: 12px;
     }
 
     .logoTextIndex {
-      font-size: 1.4rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .headerContentIndex {
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 120px;
+      box-sizing: border-box;
+      height: auto;
+      min-height: 70px;
     }
 
     .navIndex ul.navListIndex {
-      gap: 18px;
-      font-size: 0.95rem;
-    }
-  }
-
-
-  @media (max-width: 500px) {
-
-    html,
-    body {
-      font-size: 15px;
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .containerIndex,
+    .menuLinkIndex {
+      color: #222;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 4px 0;
+      font-weight: 400;
+      position: relative;
+      display: inline-block;
+      transition: color 0.2s;
+    }
+
+    .menuLinkIndex.activeIndex {
+      color: #008000;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .menuLinkIndex.activeIndex::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 4px;
+      width: 100%;
+      background: #008000;
+      display: block;
+    }
+
+    .menuLinkIndex:hover {
+      color: #008000;
+      font-weight: bold;
+    }
+
+    .menuLinkIndex:hover::after {
+      background: #008000;
+    }
+
+    .LogoImg {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    .menuLink {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menuLink:hover {
+      text-decoration: underline;
+      color: #4caf50;
+    }
+
+    .menuLink.active {
+      text-decoration: underline;
+      color: #4caf50;
+    }
+
+    /* Main Content */
+
+    .impressumMain {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: auto;
+    }
+
+    h1,
+    h2 {
+      color: #333;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    .mailto {
+      color: #4caf50;
+      text-decoration: none;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: auto;
+    }
+
+    .footerIndex {
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 40px 0 16px 0;
+      font-size: 1rem;
+      margin-top: auto;
+    }
+
     .footerContentIndex {
-      padding-left: 8px;
-      padding-right: 8px;
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      box-sizing: border-box;
+      padding-left: 120px;
+      padding-right: 120px;
     }
 
-
-    .headerContentIndex {
-      padding: 0 12px;
-      min-height: 60px;
+    .footerLeftIndex {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      height: auto;
     }
 
-    .logoImgIndex {
-      height: 40px;
+    .footerLogoLinkIndex {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logoImgIndexFooter {
+      height: 32px;
+      width: auto;
+      margin-right: 8px;
     }
 
     .logoTextIndex {
       font-size: 1.2rem;
-    }
-
-    .navIndex ul.navListIndex {
-      gap: 12px;
-      font-size: 0.9rem;
-    }
-
-    .footerContentIndex {
-      gap: 16px;
-      padding-left: 8px;
-      padding-right: 8px;
-    }
-
-    .kontaktForm {
-      padding: 16px 8px 12px 8px;
-      max-width: 100%;
-    }
-  }
-
-  @media (max-width: 375px) {
-
-    html,
-    body {
-      font-size: 14px;
-    }
-
-    .containerIndex,
-    .footerContentIndex {
-      padding-left: 4px;
-      padding-right: 4px;
-    }
-
-    .menuLinkIndex {
-      font-size: 0.9rem;
-    }
-
-    .navIndex {
-      position: relative;
-      height: 35px;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .headerContentIndex {
-      gap: 4px;
-      padding-left: 4px;
-      padding-right: 4px;
-    }
-
-    .footerContentIndex {
-      gap: 8px;
-      padding-left: 4px;
-      padding-right: 4px;
-    }
-
-    .kontaktForm {
-      padding: 16px 4px 12px 4px;
-      max-width: 100%;
+      font-weight: bold;
+      color: #fff;
     }
 
     .footerTextIndex {
@@ -368,173 +237,321 @@
       font-size: 1rem;
     }
 
-  }
-
-  /* Header Responsive Fix: Logo + Nav immer nebeneinander */
-  @media (max-width: 900px) {
-    .headerContentIndex {
-      padding-left: 32px;
-      padding-right: 32px;
-      height: 80px;
-    }
-
-    .logoImgIndex {
-      height: 48px;
-    }
-
-    .logoTextIndex {
-      font-size: 1.5rem;
-    }
-
-    .navIndex ul.navListIndex {
+    .footerSocialIndex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       gap: 20px;
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .headerContentIndex {
-      padding-left: 12px;
-      padding-right: 12px;
-      height: 70px;
     }
 
-    .logoImgIndex {
-      height: 40px;
+    .footerIconIndex img {
+      height: 28px;
+      width: 28px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.2s;
     }
 
-    .logoTextIndex {
-      font-size: 1.2rem;
+    .footerIconIndex img:hover {
+      filter: brightness(0.7) invert(0.7) sepia(1) hue-rotate(90deg) saturate(4);
     }
 
-    .navIndex ul.navListIndex {
-      gap: 12px;
-      font-size: 0.9rem;
+    @media (max-width: 768px) {
+      .headerContentIndex {
+        padding: 0 24px;
+        min-height: 65px;
+      }
+
+      .logoImgIndex {
+        height: 44px;
+      }
+
+      .logoTextIndex {
+        font-size: 1.4rem;
+      }
+
+      .navIndex ul.navListIndex {
+        gap: 18px;
+        font-size: 0.95rem;
+      }
     }
-  }
 
-  @media (max-width: 375px) {
-    .headerContentIndex {
-      padding-left: 8px;
-      padding-right: 8px;
-      height: 60px;
+    @media (max-width: 500px) {
+      html,
+      body {
+        font-size: 15px;
+      }
+
+      .containerIndex,
+      .footerContentIndex {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+
+      .headerContentIndex {
+        padding: 0 12px;
+        min-height: 60px;
+      }
+
+      .logoImgIndex {
+        height: 40px;
+      }
+
+      .logoTextIndex {
+        font-size: 1.2rem;
+      }
+
+      .navIndex ul.navListIndex {
+        gap: 12px;
+        font-size: 0.9rem;
+      }
+
+      .footerContentIndex {
+        gap: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+
+      .kontaktForm {
+        padding: 16px 8px 12px 8px;
+        max-width: 100%;
+      }
     }
 
-    .logoImgIndex {
-      height: 32px;
+    @media (max-width: 375px) {
+      html,
+      body {
+        font-size: 14px;
+      }
+
+      .containerIndex,
+      .footerContentIndex {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      .menuLinkIndex {
+        font-size: 0.9rem;
+      }
+
+      .navIndex {
+        position: relative;
+        height: 35px;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .headerContentIndex {
+        gap: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      .footerContentIndex {
+        gap: 8px;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      .kontaktForm {
+        padding: 16px 4px 12px 4px;
+        max-width: 100%;
+      }
+
+      .footerTextIndex {
+        margin: 0;
+        font-size: 1rem;
+      }
     }
 
-    .logoTextIndex {
-      font-size: 1rem;
+    /* Header Responsive Fix: Logo + Nav immer nebeneinander */
+    @media (max-width: 900px) {
+      .headerContentIndex {
+        padding-left: 32px;
+        padding-right: 32px;
+        height: 80px;
+      }
+
+      .logoImgIndex {
+        height: 48px;
+      }
+
+      .logoTextIndex {
+        font-size: 1.5rem;
+      }
+
+      .navIndex ul.navListIndex {
+        gap: 20px;
+        font-size: 1rem;
+      }
     }
 
-    .navIndex ul.navListIndex {
-      gap: 8px;
-      font-size: 0.8rem;
+    @media (max-width: 500px) {
+      .headerContentIndex {
+        padding-left: 12px;
+        padding-right: 12px;
+        height: 70px;
+      }
+
+      .logoImgIndex {
+        height: 40px;
+      }
+
+      .logoTextIndex {
+        font-size: 1.2rem;
+      }
+
+      .navIndex ul.navListIndex {
+        gap: 12px;
+        font-size: 0.9rem;
+      }
     }
-  }
-</style>
 
-<body>
-  <!-- Header -->
-  <header class="headerIndex">
-    <div class="headerContentIndex">
-      <a href="index.html" class="logoImgLinkIndex">
-        <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
-      </a>
-      <nav class="navIndex">
-        <ul class="navListIndex">
-          <li>
-            <a class="menuLinkIndex" href="index.html">Start</a>
-          </li>
-          <li>
-            <a class="menuLinkIndex" href="./croissant.html">Rezept des Tages</a>
-          </li>
-          <li><a class="menuLinkIndex" href="./kontakt.html">Kontakt</a></li>
-          <li>
-            <a class="menuLinkIndex activeIndex" href="./impressum.html">Impressum</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    @media (max-width: 375px) {
+      .headerContentIndex {
+        padding-left: 8px;
+        padding-right: 8px;
+        height: 60px;
+      }
 
-  <!-- Main Content -->
-  <main class="impressumMain">
-    <h1>Impressum</h1>
+      .logoImgIndex {
+        height: 32px;
+      }
 
-    <section>
-      <h2>Angaben gemäß den gesetzlichen Anforderungen</h2>
-      <p>
-        <strong>Verantwortlich für den Inhalt dieser Website:</strong><br />
-        Sinan Bizzotto<br />
-        Haldenstrasse 13<br />
-        4441 Thürnen<br />
-        Schweiz
-      </p>
-      <p>
-        <strong>Kontakt:</strong><br />
-        <a class="mailto" href="mailto:sinanbizzotto@icloud.com">sinanbizzotto@icloud.com</a>
-      </p>
-    </section>
+      .logoTextIndex {
+        font-size: 1rem;
+      }
 
-    <section>
-      <h2>Haftung für Inhalte</h2>
-      <p>
-        Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für
-        die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird
-        jedoch keine Gewähr übernommen. Verpflichtungen zur Entfernung oder
-        Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
-        bleiben hiervon unberührt.
-      </p>
-    </section>
+      .navIndex ul.navListIndex {
+        gap: 8px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
 
-    <section>
-      <h2>Haftung für Links</h2>
-      <p>
-        Diese Website enthält Links zu externen Websites Dritter, auf deren
-        Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte wird keine
-        Gewähr übernommen. Für die Inhalte der verlinkten Seiten ist stets der
-        jeweilige Anbieter oder Betreiber verantwortlich.
-      </p>
-    </section>
-
-    <section>
-      <h2>Urheberrecht</h2>
-      <p>
-        Die auf dieser Website erstellten Inhalte und Werke unterliegen dem
-        Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art
-        der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der
-        schriftlichen Zustimmung des jeweiligen Autors.
-      </p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footerIndex">
-    <div class="footerContentIndex">
-      <div class="footerLeftIndex">
-        <a href="index.html" class="footerLogoLinkIndex">
-          <img src="./img/logo.png" class="logoImgIndexFooter" alt="Kochwelt Logo" />
+  <body>
+    <!-- Header -->
+    <header class="headerIndex">
+      <div class="headerContentIndex">
+        <a href="index.html" class="logoImgLinkIndex">
+          <img src="./img/logo.png" class="logoImgIndex" alt="Kochwelt Logo" />
         </a>
+        <nav class="navIndex">
+          <ul class="navListIndex">
+            <li>
+              <a class="menuLinkIndex" href="index.html">Start</a>
+            </li>
+            <li>
+              <a class="menuLinkIndex" href="./croissant.html"
+                >Rezept des Tages</a
+              >
+            </li>
+            <li><a class="menuLinkIndex" href="./kontakt.html">Kontakt</a></li>
+            <li>
+              <a class="menuLinkIndex activeIndex" href="./impressum.html"
+                >Impressum</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <p class="footerTextIndex">
-          &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
+    <!-- Main Content -->
+    <main class="impressumMain impressumCard">
+      <h1>Impressum</h1>
+
+      <section>
+        <h2>Angaben gemäß den gesetzlichen Anforderungen</h2>
+        <p>
+          <strong>Verantwortlich für den Inhalt dieser Website:</strong><br />
+          Sinan Bizzotto<br />
+          Haldenstrasse 13<br />
+          4441 Thürnen<br />
+          Schweiz
         </p>
-      </div>
-      <div class="footerSocialIndex">
-        <a href="https://instagram.com" target="_blank" rel="noopener" class="footerIconIndex">
-          <img src="./img/icons/instagram.svg" alt="Instagram" />
-        </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener" class="footerIconIndex">
-          <img src="./img/icons/facebook.svg" alt="Facebook" />
-        </a>
-        <a href="https://discord.com" target="_blank" rel="noopener" class="footerIconIndex">
-          <img src="./img/icons/discord.svg" alt="Discord" />
-        </a>
-      </div>
-    </div>
-  </footer>
-</body>
+        <p>
+          <strong>Kontakt:</strong><br />
+          <a class="mailto" href="mailto:sinanbizzotto@icloud.com"
+            >sinanbizzotto@icloud.com</a
+          >
+        </p>
+      </section>
 
+      <section>
+        <h2>Haftung für Inhalte</h2>
+        <p>
+          Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für
+          die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird
+          jedoch keine Gewähr übernommen. Verpflichtungen zur Entfernung oder
+          Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
+          bleiben hiervon unberührt.
+        </p>
+      </section>
+
+      <section>
+        <h2>Haftung für Links</h2>
+        <p>
+          Diese Website enthält Links zu externen Websites Dritter, auf deren
+          Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte wird keine
+          Gewähr übernommen. Für die Inhalte der verlinkten Seiten ist stets der
+          jeweilige Anbieter oder Betreiber verantwortlich.
+        </p>
+      </section>
+
+      <section>
+        <h2>Urheberrecht</h2>
+        <p>
+          Die auf dieser Website erstellten Inhalte und Werke unterliegen dem
+          Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+          der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der
+          schriftlichen Zustimmung des jeweiligen Autors.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footerIndex">
+      <div class="footerContentIndex">
+        <div class="footerLeftIndex">
+          <a href="index.html" class="footerLogoLinkIndex">
+            <img
+              src="./img/logo.png"
+              class="logoImgIndexFooter"
+              alt="Kochwelt Logo"
+            />
+          </a>
+
+          <p class="footerTextIndex">
+            &copy; 2025 Kochwelt. Alle Rechte vorbehalten.
+          </p>
+        </div>
+        <div class="footerSocialIndex">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a
+            href="https://discord.com"
+            target="_blank"
+            rel="noopener"
+            class="footerIconIndex"
+          >
+            <img src="./img/icons/discord.svg" alt="Discord" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
