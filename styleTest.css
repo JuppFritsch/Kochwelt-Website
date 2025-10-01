@@ -775,6 +775,17 @@ main {
   background: #fff;
 }
 
+/* ========== Impressum ========== */
+.mailto {
+  color: #008000;
+  text-decoration: none;
+}
+
+.mailto:hover {
+  text-decoration: underline;
+}
+
+
 /* ========== Responsive ========== */
 @media (max-width: 900px) {
   .containerIndex,
